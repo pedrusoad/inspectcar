@@ -1,0 +1,208 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./variables";
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
+@import 'keen-slider/keen-slider.min.css';
+
+
+@import "./app";
+@import "./functions";
+@import "./root";
+@import "./page";
+@import "./global";
+@import "./features";
+
+
+body {
+  --bs-body-font-weight: 300;
+  --bs-body-line-height: 26px;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-weight: 400;
+  background-color: #ffffff;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 1rem;
+  }
+}
+
+.multi-line-truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;   /* número de linhas antes de cortar */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;     /* permite quebrar linhas */
+}
+
+h1 {
+  font-size: 3.5rem !important;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 2.2rem !important;
+  }
+}
+
+h2 {
+  font-size: 3rem !important;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 1.8rem !important;
+  }
+}
+
+b {
+  font-weight: 500 !important;
+}
+
+.fs-6 {
+  font-size: 1.2rem !important;
+}
+
+.container {
+  @media (min-width: 1400px) {
+    max-width: 1216px !important;
+  }
+}
+
+.nav-link {
+  color: white;
+  // @include media-breakpoint-down(lg) {
+  // color: black;
+  // }
+}
+
+.text-price {
+  font-weight: bold;
+  color: $price
+}
+
+.fs-7 {
+  font-size: 1.1rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  background-color: rgb(53, 53, 53);
+  transition: background-color 0.5s ease;
+
+  @include media-breakpoint-down(lg) {
+    background-color: rgb(53, 53, 53);
+    backdrop-filter: blur(10px);
+  }
+}
+
+nav.scrolled-sm {
+  background-color: rgb(53, 53, 53, 0.9) !important;
+}
+
+nav.scrolled-lg {
+  background-color: rgba(53, 53, 53, 0.8) !important;
+  box-shadow: 1px 1px 20px;
+  backdrop-filter: blur(10px);
+}
+
+/* Personalização da barra de rolagem para navegadores WebKit (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  /* Cor de fundo da área da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, $scroll-primary 0%, $scroll-secondary 50%, $scroll-primary 100%);
+  border-radius: 1rem;
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $scroll-primary;
+  /* Cor da barra de rolagem quando o mouse passa por cima */
+}
+
+@media (max-width: 450px) {
+  ::-webkit-scrollbar {
+    width: 0;
+    overflow-x: hidden;
+  }
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: $price !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2337113c'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>")!important;
+}
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2337113c'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>")!important;
+}
+
+// html, body {
+//   background-color: #fff;
+//   height: 100%;
+//   margin: 0;
+//   padding: 0;
+// }
+
+.sticky-top {
+  background-color: #45281f !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.d-flex.overflow-auto::-webkit-scrollbar {
+  height: 6px; /* altura da barra horizontal */
+}
+
+/* Garante preenchimento da área segura no iPhone */
+@supports (padding-top: env(safe-area-inset-top)) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    background-color: #fff;
+  }
+
+  .sticky-top {
+    padding-top: env(safe-area-inset-top);
+    background-color: #fff;
+  }
+}
+
+
+// CARROSSEL DE ITENS
+
+.menu-container {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.menu-item {
+  cursor: pointer;
+  font-weight: 500;
+  color: #6c757d;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.menu-item.active {
+  font-weight: 700;
+  color: #000;
+  border-bottom-color: #8B4513; /* cor marrom como na imagem */
+}
+
+.menu-item:hover {
+  color: #000;
+}

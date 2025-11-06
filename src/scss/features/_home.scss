@@ -1,0 +1,11 @@
+.home {
+  & .video {
+    width: 100%;
+    border: 1rem solid var(--#{$prefix}main);
+    border-radius: 0.375rem 0.375rem 0 0;
+    & iframe {
+      width: calc(100% + 1px);
+      aspect-ratio: 1216/692;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@mixin helper-color($color, $value) {
+  .bg-gradient-#{$color} {
+    background-color: $value !important;
+    background-image: -moz-linear-gradient(top, lighten($value, 5%), darken($value, 2%)) !important;
+    background-image: -webkit-linear-gradient(top, lighten($value, 5%), darken($value, 2%)) !important;
+    background-image: linear-gradient(to bottom, lighten($value, 5%), darken($value, 2%)) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten($value, 10%)', endColorstr='darken($value, 5%)',GradientType=0 ) !important;
+  }
+  .border-#{$color} {
+    @if ($color == "theme") {
+      border-color: var(--#{$prefix}theme) !important;
+    }
+  }
+  .text-#{$color} {
+    --#{$prefix}bg-opacity: 1;
+    color: rgba($value, var(--#{$prefix}bg-opacity)) !important;
+  }
+  .bg-#{$color} {
+    --#{$prefix}bg-opacity: 1;
+    background-color: rgba($value, var(--#{$prefix}bg-opacity)) !important;
+  }
+  .link-#{$color} {
+    --#{$prefix}text-opacity: 1;
+    color: rgba($value, var(--#{$prefix}text-opacity));
+    transition: all 0.15s ease-in-out;
+  }
+  .link-#{$color}:hover {
+    color: rgba(mix($value, #000000,80%), var(--#{$prefix}text-opacity));
+  }
+
+  .shadow-#{$color} {
+    box-shadow:  0 0.5rem 1rem rgba($value, 0.15) !important;
+  }
+  .shadow-#{$color}-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba($value, 0.075) !important;
+  }
+  .shadow-#{$color}-lg {
+    box-shadow: 0 1rem 3rem rgba($value, 0.175) !important;
+  }
+  @for $i from 1 through 4 {
+    .text-#{$color}-#{$i * 100} {
+      --#{$prefix}text-opacity: 1;
+      color: rgba(tint-color($value, (100 - ($i * 20)) * 1%), var(--#{$prefix}text-opacity)) !important;
+    }
+    .bg-#{$color}-#{$i * 100} {
+      --#{$prefix}bg-opacity: 1;
+      background-color: rgba(tint-color($value, (100 - ($i * 20)) * 1%), var(--#{$prefix}bg-opacity)) !important;
+    }
+    .text-#{$color}-#{($i + 5) * 100} {
+      --#{$prefix}text-opacity: 1;
+      color: rgba(shade-color($value, ($i * 20) * 1%), var(--#{$prefix}text-opacity)) !important;
+    }
+    .bg-#{$color}-#{($i + 5) * 100} {
+      --#{$prefix}bg-opacity: 1;
+      background-color: rgba(shade-color($value, ($i * 20) * 1%), var(--#{$prefix}bg-opacity)) !important;
+    }
+  }
+}

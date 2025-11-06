@@ -1,0 +1,49 @@
+<div class="d-flex flex-column custom-form-group w-100">
+  <ng-container *ngIf="label">
+    <label class="form-label mb-3 text-white" [for]="name">{{label}} <span *ngIf="required" class="text-primary">*</span></label>
+  </ng-container>
+  <div class="custom-input-group w-100">
+    <ng-container *ngIf="prefixIcon">
+      <div class="custom-prefix-icon d-flex justify-content-start" [style]="iconColor && '--icon-color:'+iconColor">
+        <i [class]="prefixIcon + ' fs-22px'"></i>
+      </div>
+    </ng-container>
+    <input
+    [class]="'custom-form form-control form-control-'+size+' bg-main-bright w-100 ' + classes"
+    autocomplete="off"
+    #ngInput="ngModel"
+    [id]="name"
+    [name]="name!"
+    [type]="type"
+    [minlength]="minlength!"
+    [maxlength]="maxlength!"
+    [required]="required!"
+    [(ngModel)]="value"
+    [mask]="mask"
+    [dropSpecialCharacters]="dropSpecialCharacters"
+    [disabled]="disabled!"
+    [placeholder]="placeholder || ''"
+    [ngClass]="{'is-invalid': ngForm.submitted && (ngInput?.invalid || isInvalid)}"
+    [pattern]="pattern!"
+    (ngModelChange)="onInputChange()"
+    (blur)="blur.emit($event)"
+    (focus)="focus.emit($event)"
+    (change)="onChange.emit($event)"
+    />
+    <ng-container *ngIf="sufixIcon">
+      <div class="custom-sufix-icon d-flex justify-content-end" [style]="iconColor && '--icon-color:'+iconColor">
+        <i [class]="sufixIcon + ' fs-22px'"></i>
+      </div>
+    </ng-container>
+  </div>
+  <div class="d-flex justify-content-end pt-1" [ngClass]="{'justify-content-between':ngForm.submitted && (ngInput.invalid || isInvalid)}">
+    <div *ngIf="ngForm.submitted && (ngInput.invalid || isInvalid) && !hideInvalidMsg" class="text-danger small"><small>Verifique se o campo foi preenchido corretamente.</small></div>
+    <ng-container *ngIf="value?.length && showMaxLength">
+        <div class="d-flex justify-content-end small">
+            <small class="fw-bold" [ngClass]="{'text-danger':ngForm.submitted && (ngInput.invalid || isInvalid)}">
+              <span [ngClass]="{'text-danger':value!.length < minlength!}">{{value!.length}}</span>/{{maxlength}}
+            </small>
+        </div>
+    </ng-container>
+  </div>
+</div>

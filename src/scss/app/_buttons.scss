@@ -1,0 +1,132 @@
+.btn-gradient-custom {
+  --pm-grad: var(--#{$prefix}secondary-bright);
+  --sd-grad: var(--#{$prefix}primary-bright);
+  --deg-grad: 90deg;
+  position: relative;
+  background-position: center;
+  background-size: 100% 100%;
+  border: 1px transparent;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(var(--deg-grad), var(--pm-grad), var(--sd-grad));
+  --bs-btn-border-radius: 4px;
+  transition: all 0.6s;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(var(--#{$prefix}theme-rgb), 0.15);
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  &:hover {
+    background-size: 400% 100%;
+    &::before {
+      opacity: 1;
+    }
+  }
+  &:active {
+    &::before {
+      background-color: rgba(var(--#{$prefix}theme-rgb), 0.3);
+    }
+  }
+}
+
+.btn-outline-custom {
+  --pm-grad: var(--#{$prefix}secondary-bright);
+  --sd-grad: var(--#{$prefix}primary-bright);
+  --deg-grad: 90deg;
+  --bs-border-radius: 4px;
+  --bs-border-width: 1px;
+  position: relative;
+  border: 0px solid transparent;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(var(--deg-grad), var(--pm-grad), var(--sd-grad));
+    background-repeat: no-repeat;
+    background-size: calc(100% + 2px) calc(100% + 2px);
+    background-position: center;
+    border: var(--bs-border-width) solid transparent;
+    border-radius: var(--bs-border-radius);
+    mask:
+      linear-gradient(#fff 0 0) padding-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    transition: all 0.6s;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(var(--deg-grad), var(--pm-grad), var(--sd-grad));
+    border-radius: var(--bs-border-radius);
+    background-size: 100% 100%;
+    opacity: 0;
+    transition:
+      opacity 0.3s,
+      background-size 0.6s;
+  }
+  &:hover {
+    color:var(--#{$prefix}white) !important;
+    &::after {
+      opacity: 1;
+    }
+  }
+  &:active {
+    &::after {
+      background-size: 400% 400%;
+    }
+    &::before {
+      background-size: 400% 400%;
+    }
+  }
+}
+
+.btn-transparent-custom{
+  --bs-btn-border-radius: 4px;
+  transition: .3s all;
+  border:0px solid transparent;
+  &:hover{
+    background-color: rgba(var(--#{$prefix}inverse-rgb), 0.05);
+  }
+  &:active{
+    background-color: rgba(var(--#{$prefix}inverse-rgb), 0.1) !important;
+  }
+}
+/**
+*! Button style - BEGIN
+*/
+
+.btn-custom-01 {
+  --pm-grad: var(--#{$prefix}secondary-bright);
+  --sd-grad: var(--#{$prefix}primary-bright);
+  --deg-grad: 90deg;
+}
+.btn-custom-02 {
+  --pm-grad: var(--#{$prefix}primary-bright);
+  --sd-grad: var(--#{$prefix}secondary-bright);
+  --deg-grad: 90deg;
+}
+.btn-custom-03 {
+  --pm-grad: var(--#{$prefix}secondary);
+  --sd-grad: var(--#{$prefix}primary);
+  --deg-grad: 90deg;
+}
+.btn-custom-04 {
+  --pm-grad: var(--#{$prefix}primary);
+  --sd-grad: var(--#{$prefix}secondary-bright);
+  --deg-grad: 90deg;
+}
+.btn-custom-05 {
+  --pm-grad: var(--#{$prefix}tertiary);
+  --sd-grad: var(--#{$prefix}green);
+  --deg-grad: 90deg;
+}
+
+/**
+*! Button style - END
+*/

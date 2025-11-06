@@ -1,0 +1,6 @@
+.bg-secondary-primary-bright{
+  background: linear-gradient(90deg, var(--#{$prefix}secondary-bright), var(--#{$prefix}primary-bright));
+}
+.bg-tertiary-primary-bright{
+  background: linear-gradient(90deg, var(--#{$prefix}tertiary), var(--#{$prefix}primary-bright));
+}

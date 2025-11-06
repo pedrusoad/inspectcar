@@ -1,0 +1,87 @@
+.border-gradient {
+  --pm-grad: var(--#{$prefix}secondary-bright);
+  --sd-grad: var(--#{$prefix}primary-bright);
+  --deg-grad: 90deg;
+  --bs-border-radius: 4px;
+  --bs-border-width: 1px;
+  position: relative;
+  border: 0 solid transparent;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(var(--deg-grad), var(--pm-grad), var(--sd-grad));
+    background-repeat: no-repeat;
+    background-size: calc(100% + 2px) calc(100% + 2px);
+    background-position: center;
+    border: var(--bs-border-width) solid transparent;
+    border-radius: var(--bs-border-radius);
+    mask:
+      linear-gradient(#fff 0 0) padding-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    transition: all 0.6s;
+  }
+  & + *{
+    position: relative;
+    border: var(--bs-border-width) solid transparent;
+    border-radius: var(--bs-border-radius);
+  }
+}
+
+.border-secondary-primary-bright {
+  --pm-grad: var(--#{$prefix}secondary-bright);
+  --sd-grad: var(--#{$prefix}primary-bright);
+  --deg-grad: 90deg;
+}
+.border-primary-secondary-bright {
+  --pm-grad: var(--#{$prefix}primary-bright);
+  --sd-grad: var(--#{$prefix}secondary-bright);
+  --deg-grad: 90deg;
+}
+.border-secondary-primary {
+  --pm-grad: var(--#{$prefix}secondary);
+  --sd-grad: var(--#{$prefix}primary);
+  --deg-grad: 90deg;
+}
+.border-primary-secondary {
+  --pm-grad: var(--#{$prefix}primary);
+  --sd-grad: var(--#{$prefix}secondary-bright);
+  --deg-grad: 90deg;
+}
+
+.border-gradient.rounded-1 {
+  --bs-border-radius: var(--bs-border-radius-sm) !important;
+  overflow: hidden;
+}
+.border-gradient.rounded-2 {
+  --bs-border-radius: var(--bs-border-radius-md) !important;
+  overflow: hidden;
+}
+.border-gradient.rounded-3 {
+  --bs-border-radius: var(--bs-border-radius-lg) !important;
+  overflow: hidden;
+}
+.border-gradient.rounded-4 {
+  --bs-border-radius: var(--bs-border-radius-xl) !important;
+  overflow: hidden;
+}
+.border-gradient.rounded-5 {
+  --bs-border-radius: var(--bs-border-radius-xxl) !important;
+  overflow: hidden;
+}
+.border-gradient.border-1 {
+  --bs-border-width: 1px !important;
+}
+.border-gradient.border-2 {
+  --bs-border-width: 2px !important;
+}
+.border-gradient.border-3 {
+  --bs-border-width: 3px !important;
+}
+.border-gradient.border-4 {
+  --bs-border-width: 4px !important;
+}
+.border-gradient.border-5 {
+  --bs-border-width: 5px !important;
+}

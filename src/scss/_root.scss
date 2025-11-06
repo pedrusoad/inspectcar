@@ -1,0 +1,12 @@
+@import "./global/helper-color";
+@import "./variables";
+
+:root {
+  --#{$prefix}body-color: #{$body};
+  --#{$prefix}body-bg: #{$body-bg} !important;
+  @each $color, $value in $theme-colors {
+    --#{$prefix}#{$color}: #{$value};
+    --#{$prefix}#{$color}-rgb: #{to-rgb($value)};
+    @include helper-color($color, $value);
+  }
+}

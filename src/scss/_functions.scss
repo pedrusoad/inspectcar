@@ -1,0 +1,17 @@
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+  @return $number;
+}
+@function rem($number) {
+	$number: strip-unit($number);
+	@return (($number * .0625) * 1rem);
+}
+@function rem-default($number) {
+	$number: strip-unit($number);
+	@return (($number * .0625) * 1rem);
+}
+@function tint-color($color, $weight) {
+  @return mix(white, $color, $weight);
+}

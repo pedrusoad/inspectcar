@@ -1,0 +1,30 @@
+/**
+*! shade - BEGIN
+*/
+
+.shade__ {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    z-index: 2;
+    top: calc(var(--shade-mouse-y));
+    left: calc(var(--shade-mouse-x));
+    opacity: var(--shade-opacity);
+    transition: opacity 0.5s;
+    box-shadow: 0 0 8rem #{var(--shade-size)};
+    color:rgb(var(--shade-color))
+  }
+  &:hover {
+    &::before {
+      transition: opacity 0.2s;
+    }
+  }
+}
+
+/**
+*! shade - END
+*/

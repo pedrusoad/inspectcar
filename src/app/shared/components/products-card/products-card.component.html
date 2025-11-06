@@ -1,0 +1,102 @@
+<div class="py-2" style="cursor: pointer;" (click)="open(content)">
+    <div class="row">
+        <div class="col-4">
+            <div class="ratio ratio-1x1 rounded-3">
+                <img class="rounded-3" [src]="'assets/images/produtos/'+product.categoria+'/'+product.image"
+                    alt="Sem Imagem" (error)="onImageError($event)">
+                <!-- <img class="rounded-3"
+                    [src]="'../../assets/images/produtos/'+product.categoria+'/'+product.image || 'https://static.tagme.com.br/pubimg/thumbs/MenuItem/803b0f70-439f-11ef-b98d-edc6c56549a7.jpg?ims=filters:quality(50):format(webp)'"
+                    alt="Sem Imagem" (error)="onImageError($event)"> -->
+            </div>
+        </div>
+        <div class="col-8">
+            <div [ngClass]="product.nome?'':'d-none'">
+                <div class="fw-bold text-truncate">{{product.nome}}</div>
+            </div>
+            <div [ngClass]="product.valor?'pt-2':'d-none'">
+                <div class="multi-line-truncate d-xxl-none"> R$ {{product.valor}}</div>
+                <div class="text-truncate d-none d-xxl-block"> R$ {{product.valor}}</div>
+            </div>
+            <div [ngClass]="product.descricao?'pt-2':'d-none'">
+                <div class="multi-line-truncate d-xxl-none text-main">{{product.descricao}}</div>
+                <div class="text-truncate d-none d-xxl-block text-main">{{product.descricao}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #content let-modal>
+    <div class="position-relative">
+        <div class="row">
+            <div class="col-12 col-md-6 ">
+                <div class="ratio ratio-1x1 rounded-3 overflow-hidden">
+                    <img class="rounded-3 w-100 h-100 object-fit-cover"
+                        [src]="'assets/images/produtos/'+product.categoria+'/'+product.image"
+                        (error)="onImageError($event)">
+                </div>
+
+                <!-- Botão de fechar -->
+
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="px-4 pb-4">
+                    <div [ngClass]="product.nome?'pt-4 fs-3':'d-none'">
+                        <div class="fw-bold">{{product.nome}}</div>
+                    </div>
+                    <div [ngClass]="product.valor?'pt-2 fs-4':'d-none'">
+                        <div> R$ {{product.valor}}</div>
+                    </div>
+                    <div [ngClass]="product.descricao?'pt-4':'d-none'">
+                        <div class="text-main">{{product.descricao}}</div>
+                    </div>
+                    <div [ngClass]="product.variedade?'':'d-none'">
+                        <ng-container *ngFor="let variedadeTitle of product.variedade;">
+                            <div [ngClass]="variedadeTitle.tipo?'pt-4 pb-1':'d-none'">
+                                <div class="fw-bold">{{variedadeTitle.tipo}}</div>
+                            </div>
+                            <ng-container *ngFor="let tipoVariedade of variedadeTitle.variedade;">
+                                <div [ngClass]="tipoVariedade.nome ? '' : 'd-none'">
+                                    <span>{{ tipoVariedade.nome }}</span>
+                                    <span *ngIf="tipoVariedade.valor"> - R$ {{ tipoVariedade.valor }}</span>
+                                </div>
+                            </ng-container>
+                        </ng-container>
+                    </div>
+                    <div [ngClass]="product.observacao&&!product.espetinho?'':'d-none'">
+                        <div class="row bg-primary-bright rounded-3 mt-2 py-2">
+                            <div class="col-12">
+                                <span>{{ product.observacao }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div [ngClass]="product.espetinho?'':'d-none'">
+                        <ng-container *ngFor="let observacao of product.observacao;">
+                            <div class="row bg-primary-bright rounded-3 mt-2 py-2">
+                                <div class="col-12">
+                                    <span>{{ observacao.nome }} - R$ {{ observacao.valor }}</span>
+                                </div>
+                                <div class="col-12">
+                                    <span>{{ observacao.descricao }}</span>
+                                </div>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-2 bg-light bg-opacity-50 shadow-sm"
+            aria-label="Fechar" (click)="modal.dismiss('Cross click')">
+        </button>
+    </div>
+    <!-- <div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div> -->
+    <!-- <div class="modal-body">
+		<h3>TESTE</h3>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-secondary" (click)="modal.close('Save click')">Save</button>
+	</div> -->
+</ng-template>

@@ -1,0 +1,38 @@
+
+.text-secondary-primary-bright {
+  background: linear-gradient(90deg, var(--#{$prefix}secondary-bright), var(--#{$prefix}primary-bright));
+  background-clip: text;
+  color: transparent;
+
+}
+.text-primary-secondary-bright {
+  background: linear-gradient(90deg, var(--#{$prefix}primary-bright), var(--#{$prefix}secondary-bright));
+  background-clip: text;
+  color: transparent;
+
+}
+.text-primary-tertiary-bright {
+  background: linear-gradient(90deg, var(--#{$prefix}primary-bright), var(--#{$prefix}tertiary));
+  background-clip: text;
+  color: transparent;
+
+}
+.text-tertiary-primary-bright {
+  background: linear-gradient(90deg, var(--#{$prefix}tertiary), var(--#{$prefix}primary-bright));
+  background-clip: text;
+  color: transparent;
+}
+
+.text-decoration-line-through-secondary-primary-bright{
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    left: -1px;
+    top:calc(50% - 1px);
+    width: calc(100% + 2px);
+    height: 1px;
+    background: linear-gradient(90deg, var(--#{$prefix}secondary-bright), var(--#{$prefix}primary-bright));
+
+  }
+}

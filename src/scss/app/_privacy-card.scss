@@ -1,0 +1,31 @@
+.disabled-cookies {
+  opacity: 0;
+  transform: translateY(calc(100% + 1.5rem));
+  transition: all 0s !important;
+}
+
+.cookies {
+  transition: all .7s;
+  left: 10%;
+  width: 80%;
+  margin-bottom: 1.5rem;
+  border-radius: 0.2rem;
+
+  .more-info {
+      color: #de66ff;
+  }
+
+  .more-info:hover {
+      color: #cf20ff;
+      text-decoration: underline #cf20ff;
+  }
+}
+
+@media (max-width:990px) {
+  .cookies {
+      left: 0 !important;
+      width: 100% !important;
+      margin-bottom: 0 !important;
+      border-radius: 0 !important;
+  }
+}

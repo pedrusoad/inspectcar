@@ -1,0 +1,19 @@
+<button
+  #button
+  [class]="'btn btn-custom-'+theme+' px-4 py-3 ' + classes"
+  [ngClass]="{'btn-outline-custom text-inverse':variant == 'outline','btn-gradient-custom text-white':variant == 'gradient','btn-transparent-custom':variant == 'flat'}"
+  [style]="styles"
+  [type]="type"
+  [disabled]="disabled"
+  cfaShade
+  [cfaSize]="cfaSize"
+  [cfaOpacity]="cfaOpacity"
+  [cfaColor]="cfaColor"
+  [cfaShadeDisabled]="variant == 'outline'"
+>
+  <div class="position-relative index-1 w-100 h-100" [style]="'padding:'+borderWidth+'px'">
+    <ng-content></ng-content>
+  </div>
+</button>
+
+

@@ -1,0 +1,158 @@
+/* Helper Color */
+@each $color, $value in $theme-colors {
+  @include helper-color($color, $value);
+}
+
+/* Helper Limit lines */
+@for $i from 1 through 6 {
+  .limit-line-#{$i} {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-line-clamp: #{$i};
+    -webkit-box-orient: vertical;
+  }
+}
+
+/* Helper sizes
+- %
+- vw/vh
+- max-width / max-height
+- min-width / min-height
+*/
+@for $i from 1 through 10 {
+  .w-#{$i * 10} {
+    width: calc(1% * (#{$i} * 10));
+  }
+  .h-#{$i * 10} {
+    height: calc(1% * (#{$i} * 10));
+  }
+  .w-#{$i * 10}vw {
+    width: calc(1vw * (#{$i} * 10));
+  }
+  .h-#{$i * 10}vh {
+    height: calc(1vh * (#{$i} * 10));
+  }
+  .max-w-#{$i * 10} {
+    max-width: calc(1% * (#{$i} * 10));
+  }
+  .max-h-#{$i * 10} {
+    max-height: calc(1% * (#{$i} * 10));
+  }
+  .min-w-#{$i * 10} {
+    min-width: calc(1% * (#{$i} * 10));
+  }
+  .min-h-#{$i * 10} {
+    min-height: calc(1% * (#{$i} * 10));
+  }
+  .max-vw-#{$i * 10} {
+    max-width: calc(1vw * (#{$i} * 10));
+  }
+  .max-vh-#{$i * 10} {
+    max-height: calc(1vh * (#{$i} * 10));
+  }
+  .min-vw-#{$i * 10} {
+    min-width: calc(1vw * (#{$i} * 10));
+  }
+  .min-vh-#{$i * 10} {
+    min-height: calc(1vh * (#{$i} * 10));
+  }
+}
+
+/* Helper sizes px */
+@for $i from 10 through 19 {
+  .w-#{$i}px {
+    width: #{$i}px;
+  }
+  .h-#{$i}px {
+    height: #{$i}px;
+  }
+  .max-w-#{$i * 10}px {
+    max-width: #{$i}px;
+  }
+  .max-h-#{$i * 10}px {
+    max-height: #{$i}px;
+  }
+  .min-w-#{$i * 10}px {
+    min-width: #{$i}px;
+  }
+  .min-h-#{$i * 10}px {
+    min-height: #{$i}px;
+  }
+}
+
+/* Helper sizes px * 5 */
+@for $i from 4 through 30 {
+  .w-#{$i * 5}px {
+    width: calc(#{$i} * 5px);
+  }
+  .h-#{$i * 5}px {
+    height: calc(#{$i} * 5px);
+  }
+  .max-w-#{$i * 10}px {
+    max-width: calc(#{$i} * 5px);
+  }
+  .max-h-#{$i * 10}px {
+    max-height: calc(#{$i} * 5px);
+  }
+  .min-w-#{$i * 10}px {
+    min-width: calc(#{$i} * 5px);
+  }
+  .min-h-#{$i * 10}px {
+    min-height: calc(#{$i} * 5px);
+  }
+}
+
+/* Helper sizes px * 10 */
+@for $i from 16 through 50 {
+  .w-#{$i * 10}px {
+    width: calc(#{$i} * 10px);
+  }
+  .h-#{$i * 10}px {
+    height: calc(#{$i} * 10px);
+  }
+  .max-w-#{$i * 10}px {
+    max-width: calc(#{$i} * 10px);
+  }
+  .max-h-#{$i * 10}px {
+    max-height: calc(#{$i} * 10px);
+  }
+  .min-w-#{$i * 10}px {
+    min-width: calc(#{$i} * 10px);
+  }
+  .min-h-#{$i * 10}px {
+    min-height: calc(#{$i} * 10px);
+  }
+}
+
+/* Helper opacity */
+@for $i from 0 through 20 {
+  .opacity-#{$i * 5} {
+    opacity: calc(#{$i} * 5 / 100);
+  }
+  .text-opacity-#{$i * 5} {
+    opacity: calc(#{$i} * 5 / 100) !important;
+  }
+}
+
+/* Helper background opacity */
+@for $i from 0 through 20 {
+  .bg-opacity-#{$i * 5} {
+    --#{$prefix}bg-opacity: calc(#{$i} * 5 / 100) !important;
+  }
+}
+
+/*Helper font-size-px*/
+@for $i from 12 through 54 {
+  .fs-#{$i}px {
+    font-size: $i + px !important;
+  }
+}
+
+/*Helper index*/
+@for $i from 0 through 10 {
+  .index-#{$i} {
+    z-index: #{$i} !important;
+  }
+}

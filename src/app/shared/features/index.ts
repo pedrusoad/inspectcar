@@ -1,0 +1,1 @@
+export { BackComponent } from "./back/back.component";

@@ -1,0 +1,167 @@
+.custom-input-group {
+  position: relative;
+  --x-icon: 20px;
+  --y-icon: 16px;
+  & .custom-sufix-icon {
+    position: absolute;
+    width: 30px;
+    bottom: calc(var(--y-icon) + 1px);
+    right: var(--x-icon);
+  }
+  & .custom-prefix-icon {
+    position: absolute;
+    bottom: calc(var(--y-icon) + 1px);
+    left: var(--x-icon);
+  }
+  & .custom-prefix-icon,
+  & .custom-sufix-icon {
+    --icon-color: linear-gradient(90deg, var(--#{$prefix}secondary-bright), var(--#{$prefix}primary-bright));
+    & i {
+      background: var(--icon-color);
+      background-clip: text;
+      color: transparent;
+    }
+  }
+  & .custom-form {
+    padding: var(--y-icon) var(--x-icon);
+  }
+  & .custom-form.is-invalid {
+    border-color: rgba(var(--#{$prefix}danger-rgb), 0.7);
+    background-position: right var(--x-icon) center;
+    padding-right: calc(var(--y-icon) + 34px + var(--y-icon) / 2);
+  }
+  &:has(.custom-form.form-control-lg) {
+    --x-icon: 24px;
+    --y-icon: 20px;
+  }
+  &:has(.custom-form.form-control-sm) {
+    --x-icon: 16px;
+    --y-icon: 12px;
+  }
+  &:has(.custom-prefix-icon) {
+    & .custom-form {
+      padding-left: calc(var(--y-icon) + 34px);
+    }
+  }
+  &:has(.custom-sufix-icon) {
+    & .custom-form {
+      padding-right: calc(var(--y-icon) + 34px + var(--y-icon) / 2);
+    }
+    & .custom-form.is-invalid {
+      background-image: none !important;
+    }
+  }
+}
+
+.custom-form {
+  border-radius: 4px;
+  border-width: 1.5px;
+  border-color: rgba(var(--#{$prefix}white-rgb), 0.15);
+  font-size: 1rem !important;
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.custom-input-check {
+  background-color: var(--#{$prefix}main);
+}
+
+.custom-select-form {
+  --px: 20px;
+  --py: 16px;
+  &.custom-select-form-lg {
+    --px: 24px;
+    --py: 20px;
+  }
+  &.custom-select-form-md {
+    --px: 20px;
+    --py: 16px;
+  }
+  &.custom-select-form-sm {
+    --px: 16px;
+    --py: 12px;
+  }
+
+  & .ng-select-container,
+  &.ng-select-opened .ng-select-container {
+    background-color: rgba(var(--#{$prefix}inverse-rgb), 0.05);
+    border-radius: 4px;
+    border-width: 1.5px;
+    border-color: rgba(var(--#{$prefix}white-rgb), 0.15);
+    font-size: 1rem !important;
+    color: var(--#{$prefix}body-color);
+    padding: var(--py) var(--px);
+    & .ng-value-container {
+      padding-left: 0;
+      & .ng-input {
+        top: 0 !important;
+        padding: var(--py) var(--px) !important;
+        border: 1.5px solid transparent !important;
+        & input {
+          font-size: 1rem !important;
+          color: var(--#{$prefix}body-color);
+        }
+      }
+      & .ng-placeholder {
+        color: inherit;
+        opacity: 0.75;
+        font-weight: 400;
+      }
+      & .ng-value {
+        font-weight: 400;
+      }
+    }
+  }
+
+  &.ng-select-opened.ng-select-bottom  .ng-select-container {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  &.ng-select-opened.ng-select-top  .ng-select-container {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  &.ng-select-focused .ng-select-container{
+    border-color: #c68fd5;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(var(--#{$prefix}primary-rgb), 0.25);
+  }
+  &.ng-select-focused:not(.ng-select-opened) .ng-select-container{
+    border-color: rgba(var(--#{$prefix}white-rgb), 0.15);
+    outline: 0;
+    box-shadow: none;
+  }
+  & .ng-dropdown-panel {
+    border-color: rgba(var(--#{$prefix}white-rgb), 0.15);
+    border-width: 1.5px;
+    background-color: rgba(var(--#{$prefix}main-rgb), 1);
+    &.ng-select-bottom{
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+    &.ng-select-top{
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+    & .ng-dropdown-panel-items {
+      & .ng-option {
+        background-color: rgba(var(--#{$prefix}inverse-rgb), 0.025);
+        color: var(--#{$prefix}body-color);
+        padding: calc(#{var(--py)} / 1.5) var(--px);
+        &.ng-option-marked{
+          background-color: rgba(var(--#{$prefix}primary-rgb), 0.15);
+        }
+        &.ng-option-selected{
+          background-color: rgba(var(--#{$prefix}primary-rgb), 0.35);
+          color:rgba(var(--#{$prefix}inverse),.95)
+
+        }
+      }
+    }
+  }
+
+  &.ng-select-single .ng-select-container {
+    height: initial;
+  }
+}
