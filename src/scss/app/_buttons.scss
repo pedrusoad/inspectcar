@@ -127,6 +127,13 @@
   --deg-grad: 90deg;
 }
 
+.btn-com-hover:hover img {
+    /* Inverte a cor do preto para branco. O valor exato pode variar */
+    /* dependendo da cor original do SVG e da cor final desejada. */
+    filter: invert(1) grayscale(100%) brightness(200%); 
+    transition: filter 0.2s; /* Adiciona uma transição suave */
+}
+
 /**
 *! Button style - END
 */
