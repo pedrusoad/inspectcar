@@ -21452,14 +21452,14 @@ nav.scrolled-lg {
   background:
     linear-gradient(
       180deg,
-      #2b1913 0%,
-      #9e5d47 50%,
-      #2b1913 100%);
+      #202020 0%,
+      #c5c5c5 50%,
+      #202020 100%);
   border-radius: 1rem;
   width: 0.5rem;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2b1913;
+  background: #202020;
 }
 @media (max-width: 450px) {
   ::-webkit-scrollbar {
@@ -21515,4 +21515,4 @@ nav.scrolled-lg {
 }
 
 /* angular:styles/global:styles */
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles-TW4PRDGY.css.map */

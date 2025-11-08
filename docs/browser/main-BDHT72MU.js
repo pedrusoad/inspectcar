@@ -60201,6 +60201,19 @@ _BannerService.\u0275fac = function BannerService_Factory(t2) {
 _BannerService.\u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _BannerService, factory: _BannerService.\u0275fac, providedIn: "root" });
 var BannerService = _BannerService;
 
+// src/app/shared/services/vehicle.service.ts
+var _VehicleService = class _VehicleService {
+  constructor() {
+    this.veiculo = [];
+    this.backupVeiculo = [];
+  }
+};
+_VehicleService.\u0275fac = function VehicleService_Factory(t2) {
+  return new (t2 || _VehicleService)();
+};
+_VehicleService.\u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _VehicleService, factory: _VehicleService.\u0275fac, providedIn: "root" });
+var VehicleService = _VehicleService;
+
 // src/app/shared/pipes/safe-url.ts
 var _SafeUrl = class _SafeUrl {
   constructor(sanitizer) {
@@ -60465,7 +60478,7 @@ _ProductsCardComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
   NgClass,
   NgForOf,
   NgIf
-], styles: ["\n\n/*# sourceMappingURL=products-card.component.css.map */"] });
+], styles: ["\n\n/*# sourceMappingURL=products-card.component-OVL25RRK.css.map */"] });
 var ProductsCardComponent = _ProductsCardComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ProductsCardComponent, { className: "ProductsCardComponent", filePath: "src\\app\\shared\\components\\products-card\\products-card.component.ts", lineNumber: 21 });
@@ -60486,7 +60499,7 @@ _ProductCardComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ 
 }, dependencies: [
   RouterModule,
   CommonModule
-], styles: ["\n\n/*# sourceMappingURL=product-card.component.css.map */"] });
+], styles: ["\n\n/*# sourceMappingURL=product-card.component-GW5U2BEQ.css.map */"] });
 var ProductCardComponent = _ProductCardComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ProductCardComponent, { className: "ProductCardComponent", filePath: "src\\app\\shared\\components\\product-card\\product-card.component.ts", lineNumber: 17 });
@@ -61211,7 +61224,7 @@ _BtnComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _B
     \u0275\u0275advance(2);
     \u0275\u0275styleMap("padding:" + ctx.borderWidth + "px");
   }
-}, dependencies: [AppModule, NgClass, ShadeDirective], styles: ["\n\n/*# sourceMappingURL=btn.component.css.map */"] });
+}, dependencies: [AppModule, NgClass, ShadeDirective], styles: ["\n\n/*# sourceMappingURL=btn.component-SQ3Z4O32.css.map */"] });
 var BtnComponent = _BtnComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(BtnComponent, { className: "BtnComponent", filePath: "src\\app\\shared\\components\\buttons\\btn\\btn.component.ts", lineNumber: 15 });
@@ -61280,7 +61293,7 @@ _BtnLinkComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type
   AppModule,
   BtnComponent,
   RouterModule
-], styles: ["\n\n/*# sourceMappingURL=btn-link.component.css.map */"] });
+], styles: ["\n\n/*# sourceMappingURL=btn-link.component-NDOM4QII.css.map */"] });
 var BtnLinkComponent = _BtnLinkComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(BtnLinkComponent, { className: "BtnLinkComponent", filePath: "src\\app\\shared\\components\\buttons\\btn-link\\btn-link.component.ts", lineNumber: 17 });
@@ -61323,7 +61336,7 @@ _BtnRouteComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ typ
   BtnComponent,
   RouterModule,
   RouterLink
-], styles: ["\n\n/*# sourceMappingURL=btn-route.component.css.map */"] });
+], styles: ["\n\n/*# sourceMappingURL=btn-route.component-RXH35MLX.css.map */"] });
 var BtnRouteComponent = _BtnRouteComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(BtnRouteComponent, { className: "BtnRouteComponent", filePath: "src\\app\\shared\\components\\buttons\\btn-route\\btn-route.component.ts", lineNumber: 17 });
@@ -61403,7 +61416,7 @@ _PrivacidadeCardComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponen
   if (rf & 2) {
     \u0275\u0275property("ngClass", \u0275\u0275pureFunction1(1, _c04, ctx.isPolictAccepted));
   }
-}, dependencies: [AppModule, NgClass, RouterModule, RouterLink, BtnComponent], styles: ["\n\n/*# sourceMappingURL=privacidade-card.component.css.map */"] });
+}, dependencies: [AppModule, NgClass, RouterModule, RouterLink, BtnComponent], styles: ["\n\n/*# sourceMappingURL=privacidade-card.component-3SRHBPRQ.css.map */"] });
 var PrivacidadeCardComponent = _PrivacidadeCardComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PrivacidadeCardComponent, { className: "PrivacidadeCardComponent", filePath: "src\\app\\shared\\components\\privacidade-card\\privacidade-card.component.ts", lineNumber: 17 });
@@ -63979,7 +63992,7 @@ _InputTextComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ ty
   NgModel,
   ReactiveFormsModule,
   NgxMaskDirective
-], styles: ["\n\n/*# sourceMappingURL=input-text.component.css.map */"] });
+], styles: ["\n\n/*# sourceMappingURL=input-text.component-MNNQVA3X.css.map */"] });
 var InputTextComponent = _InputTextComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(InputTextComponent, { className: "InputTextComponent", filePath: "src\\app\\shared\\components\\input-text\\input-text.component.ts", lineNumber: 23 });
@@ -64097,7 +64110,7 @@ _TimerComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: 
     \u0275\u0275advance(6);
     \u0275\u0275textInterpolate(ctx.secs);
   }
-}, styles: ["\n\n/*# sourceMappingURL=timer.component.css.map */"] });
+}, styles: ["\n\n/*# sourceMappingURL=timer.component-HPQDSPDX.css.map */"] });
 var TimerComponent = _TimerComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(TimerComponent, { className: "TimerComponent", filePath: "src\\app\\shared\\components\\timer\\timer.component.ts", lineNumber: 11 });
@@ -64133,201 +64146,234 @@ _FooterComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type:
     \u0275\u0275advance(9);
     \u0275\u0275textInterpolate1("Copyright \xA9 ", ctx.ano, "");
   }
-}, dependencies: [RouterModule], styles: ["\n\n/*# sourceMappingURL=footer.component.css.map */"] });
+}, dependencies: [RouterModule], styles: ["\n\n/*# sourceMappingURL=footer.component-EPQFTCWJ.css.map */"] });
 var FooterComponent = _FooterComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(FooterComponent, { className: "FooterComponent", filePath: "src\\app\\shared\\components\\footer\\footer.component.ts", lineNumber: 11 });
 })();
 
 // src/app/page/home/home.component.ts
-function HomeComponent_option_9_Template(rf, ctx) {
+function HomeComponent_ng_container_1_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "option", 32);
+    const _r3 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementContainerStart(0);
+    \u0275\u0275elementStart(1, "div", 36)(2, "cfa-btn", 32);
+    \u0275\u0275listener("click", function HomeComponent_ng_container_1_Template_cfa_btn_click_2_listener() {
+      \u0275\u0275restoreView(_r3);
+      const ctx_r2 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r2.carregaVeiculoBack());
+    });
+    \u0275\u0275elementStart(3, "div", 37)(4, "span", 38);
+    \u0275\u0275element(5, "img", 39);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(6, "span");
+    \u0275\u0275text(7, "Carregar Ve\xEDculo Anterior");
+    \u0275\u0275elementStart(8, "div", 40);
+    \u0275\u0275text(9);
+    \u0275\u0275elementEnd()()()()();
+    \u0275\u0275elementContainerEnd();
+  }
+  if (rf & 2) {
+    const ctx_r0 = \u0275\u0275nextContext();
+    \u0275\u0275advance(2);
+    \u0275\u0275property("type", "button")("classes", "btn-com-hover ps-1 pe-1 pt-1 pb-1")("variant", "outline");
+    \u0275\u0275advance(7);
+    \u0275\u0275textInterpolate(ctx_r0.veiculoBackup[0].placa);
+  }
+}
+function HomeComponent_option_10_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "option", 41);
     \u0275\u0275text(1);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const marca_r1 = ctx.$implicit;
-    \u0275\u0275property("value", marca_r1.nome);
+    const marca_r4 = ctx.$implicit;
+    \u0275\u0275property("value", marca_r4.nome);
     \u0275\u0275advance();
-    \u0275\u0275textInterpolate1(" ", marca_r1.nome, " ");
+    \u0275\u0275textInterpolate1(" ", marca_r4.nome, " ");
   }
 }
 var _HomeComponent = class _HomeComponent {
-  constructor(AppService2) {
+  constructor(AppService2, VehicleService2, router, CommonService2) {
     this.AppService = AppService2;
+    this.VehicleService = VehicleService2;
+    this.router = router;
+    this.CommonService = CommonService2;
     this.marcas = [];
     this.marcaSelecionada = "";
     this.modeloVeiculo = "";
+    this.placaVeiculo = "";
     this.portasSelecionadas = "";
     this.tipoSelecionado = "";
+    this.veiculoBackup = [];
   }
-  // public banners: Banner[] = this.BannerService.banners
-  // Banner
-  // private parseBrDate(dateStr: string): Date {
-  //   if (!dateStr || !dateStr.includes('/')) {
-  //     return new Date('Invalid'); // garante que vai cair no filtro depois
-  //   }
-  //   const [day, month, year] = dateStr.split('/').map(Number);
-  //   return new Date(year, month - 1, day);
-  // }
-  //   getActiveBanners(): Banner[] {
-  //   const today = new Date();
-  //   const weekday = today.getDay() === 0 ? 1 : today.getDay() + 1;
-  //   return this.banners.filter(b => {
-  //     let validWeekday = true;
-  //     let validDate = true;
-  //     // Validar weekday (se tiver)
-  //     if (b.weekdays && b.weekdays.length > 0) {
-  //       validWeekday = b.weekdays.includes(weekday);
-  //     }
-  //     // Validar dateRange (se tiver)
-  //     if (b.startDate && b.endDate) {
-  //       const start = this.parseBrDate(b.startDate);
-  //       const end = this.parseBrDate(b.endDate);
-  //       if (isNaN(start.getTime()) || isNaN(end.getTime())) {
-  //         console.warn('Data inválida em banner:', b);
-  //         validDate = false;
-  //       } else {
-  //         end.setHours(23, 59, 59, 999);
-  //         validDate = today >= start && today <= end;
-  //       }
-  //     }
-  //     // Só entra se passar em todos os filtros que existem
-  //     return validWeekday && validDate;
-  //   });
-  // }
-  // public categories = this.AppService.categorias;
-  // Categoria Inicial Ativa
-  // activeSection = this.categories[0].id;
-  // @ViewChild('sticky') stickyElement!: ElementRef;
-  // scrollToSection(id: string) {
-  //   const el = document.getElementById(id);
-  //   if (el) {
-  //     const stickyHeight = this.stickyElement.nativeElement.offsetHeight;
-  //     const top = el.getBoundingClientRect().top + window.scrollY - stickyHeight;
-  //     window.scrollTo({ top, behavior: 'smooth' });
-  //   }
-  // }
-  // @HostListener('window:scroll', [])
-  // onWindowScroll() {
-  //   for (const section of this.categories) {
-  //     const el = document.getElementById(section.alias);
-  //     if (el) {
-  //       const rect = el.getBoundingClientRect();
-  //       if (rect.top <= 150 && rect.bottom >= 100) {
-  //         this.activeSection = section.id;
-  //         this.scrollActiveItemIntoView();
-  //         break;
-  //       }
-  //     }
-  //   }
-  // }
-  // scrollActiveItemIntoView() {
-  //   const activeBtn = document.querySelector('.btn.fw-bold');
-  //   activeBtn?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-  // }
+  verificarCampos() {
+    if (!this.marcaSelecionada || !this.modeloVeiculo || !this.placaVeiculo || !this.portasSelecionadas || !this.tipoSelecionado) {
+      alert("Por favor, preencha todos os dados do ve\xEDculo antes de continuar!");
+    } else {
+      this.VehicleService.veiculo.push({
+        marca: this.marcaSelecionada,
+        placa: this.placaVeiculo,
+        modelo: this.modeloVeiculo,
+        portas: this.portasSelecionadas,
+        tipo: this.tipoSelecionado
+      });
+      this.VehicleService.backupVeiculo = [];
+      this.VehicleService.backupVeiculo.push({
+        marca: this.marcaSelecionada,
+        placa: this.placaVeiculo,
+        modelo: this.modeloVeiculo,
+        portas: this.portasSelecionadas,
+        tipo: this.tipoSelecionado
+      });
+      this.CommonService.delLocalStorage("veiculo");
+      this.CommonService.delLocalStorage("backupVeiculo");
+      this.CommonService.setLocalStorage("veiculo", this.VehicleService.veiculo, 1e6);
+      this.CommonService.setLocalStorage("backupVeiculo", this.VehicleService.backupVeiculo, 1e6);
+      this.router.navigate(["/menu-orcamento"]);
+    }
+  }
+  carregaVeiculoBack() {
+    this.marcaSelecionada = this.veiculoBackup[0].marca;
+    this.modeloVeiculo = this.veiculoBackup[0].modelo;
+    this.placaVeiculo = this.veiculoBackup[0].placa;
+    this.portasSelecionadas = this.veiculoBackup[0].portas;
+    this.tipoSelecionado = this.veiculoBackup[0].tipo;
+  }
   ngOnInit() {
+    if (this.CommonService.getLocalStorage("backupVeiculo")) {
+      this.VehicleService.backupVeiculo = this.CommonService.getLocalStorage("backupVeiculo");
+      this.veiculoBackup = this.CommonService.getLocalStorage("backupVeiculo");
+      console.log(this.veiculoBackup);
+    } else {
+      console.log("Nenhum ve\xEDculo de backup encontrado no localStorage.");
+    }
     this.marcas = this.AppService.getMarcas();
+    console.log("Veiculo principal:");
+    console.log(this.VehicleService.veiculo);
+    console.log("Veiculo backup:");
+    console.log(this.VehicleService.backupVeiculo);
   }
 };
 _HomeComponent.\u0275fac = function HomeComponent_Factory(t2) {
-  return new (t2 || _HomeComponent)(\u0275\u0275directiveInject(AppService));
+  return new (t2 || _HomeComponent)(\u0275\u0275directiveInject(AppService), \u0275\u0275directiveInject(VehicleService), \u0275\u0275directiveInject(Router), \u0275\u0275directiveInject(CommonService));
 };
 _HomeComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HomeComponent, selectors: [["app-home"]], standalone: true, features: [\u0275\u0275ProvidersFeature([
   AppService,
   BannerService
-]), \u0275\u0275StandaloneFeature], decls: 69, vars: 12, consts: [[1, "container"], [1, "row", "mt-5"], [1, "col-12", "col-md-6"], [1, "mb-3"], ["for", "marcaVeiculo", 1, "form-label"], ["aria-label", "marcaVeiculo", 1, "form-select", 3, "ngModel", "ngModelChange"], ["value", "", "disabled", "", "selected", ""], [3, "value", 4, "ngFor", "ngForOf"], ["for", "modeloVeiculo", 1, "form-label"], ["type", "text", "id", "modeloVeiculo", "placeholder", "Digite o modelo", 1, "form-control", 3, "ngModel", "ngModelChange"], ["for", "portas", 1, "form-label"], ["id", "portas", "aria-label", "portas", 1, "form-select", 3, "ngModel", "ngModelChange"], ["value", "2"], ["value", "4"], ["for", "tipoVeiculo", 1, "form-label"], ["id", "tipoVeiculo", "aria-label", "tipoVeiculo", 1, "form-select", 3, "ngModel", "ngModelChange"], ["value", "Hatch"], ["value", "Sedan"], ["value", "SUV"], ["value", "Pickup"], [1, "col-12"], [1, "bg-primary-bright", "p-3", "mt-4", "rounded"], [1, "justify-content-center", "d-flex"], [1, "m-0", "fw-bold"], [1, "mt-3"], [1, "fw-bold"], [1, "mt-2"], [1, "d-flex", "justify-content-center", "pt-5"], [3, "router", "classes", "variant"], [1, "d-flex", "align-items-center", "gap-2"], [1, "pb-1"], ["src", "assets/images/svg/car-side.svg", "width", "30", "height", "30", "alt", "Carro", 1, "img-fluid"], [3, "value"]], template: function HomeComponent_Template(rf, ctx) {
+]), \u0275\u0275StandaloneFeature], decls: 79, vars: 15, consts: [[1, "container"], [4, "ngIf"], [1, "row", "mt-3"], [1, "col-12", "col-md-6"], [1, "mb-3"], ["for", "marcaVeiculo", 1, "form-label"], ["aria-label", "marcaVeiculo", 1, "form-select", 3, "ngModel", "ngModelChange"], ["value", "", "disabled", "", "selected", ""], [3, "value", 4, "ngFor", "ngForOf"], ["for", "modeloVeiculo", 1, "form-label"], ["type", "text", "id", "modeloVeiculo", "placeholder", "Digite o modelo", 1, "form-control", 3, "ngModel", "ngModelChange"], [1, "col-12", "col-md-4"], ["for", "placaVeiculo", 1, "form-label"], ["type", "text", "id", "placaVeiculo", "placeholder", "Digite a placa", 1, "form-control", 3, "ngModel", "ngModelChange"], ["for", "portas", 1, "form-label"], ["id", "portas", "aria-label", "portas", 1, "form-select", 3, "ngModel", "ngModelChange"], ["value", "2"], ["value", "4"], ["for", "tipoVeiculo", 1, "form-label"], ["id", "tipoVeiculo", "aria-label", "tipoVeiculo", 1, "form-select", 3, "ngModel", "ngModelChange"], ["value", "Hatch"], ["value", "Sedan"], ["value", "SUV"], ["value", "Pickup"], [1, "col-12"], [1, "bg-primary-bright", "p-3", "mt-3", "rounded"], [1, "justify-content-center", "d-flex"], [1, "m-0", "fw-bold"], [1, "mt-3"], [1, "fw-bold"], [1, "mt-2"], [1, "d-flex", "justify-content-center", "py-3"], [3, "type", "classes", "variant", "click"], [1, "d-flex", "align-items-center", "gap-2"], [1, "pb-1"], ["src", "assets/images/svg/car-side.svg", "width", "30", "height", "30", "alt", "Carro", 1, "img-fluid"], [1, "d-flex", "justify-content-center", "pt-3"], [1, "d-flex", "align-items-center", "gap-2", "px-2"], [1, ""], ["src", "assets/images/svg/reload.svg", "width", "30", "height", "30", "alt", "Reload", 1, "img-fluid"], [1, "fs-12px"], [3, "value"]], template: function HomeComponent_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3)(4, "label", 4);
-    \u0275\u0275text(5, "Selecione a Marca do Ve\xEDculo");
+    \u0275\u0275elementStart(0, "div", 0);
+    \u0275\u0275template(1, HomeComponent_ng_container_1_Template, 10, 4, "ng-container", 1);
+    \u0275\u0275elementStart(2, "div", 2)(3, "div", 3)(4, "div", 4)(5, "label", 5);
+    \u0275\u0275text(6, "Selecione a Marca do Ve\xEDculo");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(6, "select", 5);
-    \u0275\u0275listener("ngModelChange", function HomeComponent_Template_select_ngModelChange_6_listener($event) {
+    \u0275\u0275elementStart(7, "select", 6);
+    \u0275\u0275listener("ngModelChange", function HomeComponent_Template_select_ngModelChange_7_listener($event) {
       return ctx.marcaSelecionada = $event;
     });
-    \u0275\u0275elementStart(7, "option", 6);
-    \u0275\u0275text(8, "Selecione");
+    \u0275\u0275elementStart(8, "option", 7);
+    \u0275\u0275text(9, "Selecione");
     \u0275\u0275elementEnd();
-    \u0275\u0275template(9, HomeComponent_option_9_Template, 2, 2, "option", 7);
+    \u0275\u0275template(10, HomeComponent_option_10_Template, 2, 2, "option", 8);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(10, "div", 2)(11, "div", 3)(12, "label", 8);
-    \u0275\u0275text(13, "Modelo do Ve\xEDculo");
+    \u0275\u0275elementStart(11, "div", 3)(12, "div", 4)(13, "label", 9);
+    \u0275\u0275text(14, "Modelo do Ve\xEDculo");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(14, "input", 9);
-    \u0275\u0275listener("ngModelChange", function HomeComponent_Template_input_ngModelChange_14_listener($event) {
+    \u0275\u0275elementStart(15, "input", 10);
+    \u0275\u0275listener("ngModelChange", function HomeComponent_Template_input_ngModelChange_15_listener($event) {
       return ctx.modeloVeiculo = $event;
     });
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(15, "div", 2)(16, "div", 3)(17, "label", 10);
-    \u0275\u0275text(18, "Quantidade de Portas");
+    \u0275\u0275elementStart(16, "div", 11)(17, "div", 4)(18, "label", 12);
+    \u0275\u0275text(19, "Placa do Ve\xEDculo");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(19, "select", 11);
-    \u0275\u0275listener("ngModelChange", function HomeComponent_Template_select_ngModelChange_19_listener($event) {
+    \u0275\u0275elementStart(20, "input", 13);
+    \u0275\u0275listener("ngModelChange", function HomeComponent_Template_input_ngModelChange_20_listener($event) {
+      return ctx.placaVeiculo = $event;
+    });
+    \u0275\u0275elementEnd()()();
+    \u0275\u0275elementStart(21, "div", 11)(22, "div", 4)(23, "label", 14);
+    \u0275\u0275text(24, "Quantidade de Portas");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(25, "select", 15);
+    \u0275\u0275listener("ngModelChange", function HomeComponent_Template_select_ngModelChange_25_listener($event) {
       return ctx.portasSelecionadas = $event;
     });
-    \u0275\u0275elementStart(20, "option", 6);
-    \u0275\u0275text(21, "Selecione");
+    \u0275\u0275elementStart(26, "option", 7);
+    \u0275\u0275text(27, "Selecione");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(22, "option", 12);
-    \u0275\u0275text(23, "2 Portas");
+    \u0275\u0275elementStart(28, "option", 16);
+    \u0275\u0275text(29, "2 Portas");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(24, "option", 13);
-    \u0275\u0275text(25, "4 Portas");
+    \u0275\u0275elementStart(30, "option", 17);
+    \u0275\u0275text(31, "4 Portas");
     \u0275\u0275elementEnd()()()();
-    \u0275\u0275elementStart(26, "div", 2)(27, "div", 3)(28, "label", 14);
-    \u0275\u0275text(29, "Tipo do Ve\xEDculo");
+    \u0275\u0275elementStart(32, "div", 11)(33, "div", 4)(34, "label", 18);
+    \u0275\u0275text(35, "Tipo do Ve\xEDculo");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(30, "select", 15);
-    \u0275\u0275listener("ngModelChange", function HomeComponent_Template_select_ngModelChange_30_listener($event) {
+    \u0275\u0275elementStart(36, "select", 19);
+    \u0275\u0275listener("ngModelChange", function HomeComponent_Template_select_ngModelChange_36_listener($event) {
       return ctx.tipoSelecionado = $event;
     });
-    \u0275\u0275elementStart(31, "option", 6);
-    \u0275\u0275text(32, "Selecione");
+    \u0275\u0275elementStart(37, "option", 7);
+    \u0275\u0275text(38, "Selecione");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(33, "option", 16);
-    \u0275\u0275text(34, "Hatch");
+    \u0275\u0275elementStart(39, "option", 20);
+    \u0275\u0275text(40, "Hatch");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(35, "option", 17);
-    \u0275\u0275text(36, "Sedan");
+    \u0275\u0275elementStart(41, "option", 21);
+    \u0275\u0275text(42, "Sedan");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(37, "option", 18);
-    \u0275\u0275text(38, "SUV");
+    \u0275\u0275elementStart(43, "option", 22);
+    \u0275\u0275text(44, "SUV");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(39, "option", 19);
-    \u0275\u0275text(40, "Pickup");
+    \u0275\u0275elementStart(45, "option", 23);
+    \u0275\u0275text(46, "Pickup");
     \u0275\u0275elementEnd()()()();
-    \u0275\u0275elementStart(41, "div", 20)(42, "div", 21)(43, "div", 22)(44, "h5", 23);
-    \u0275\u0275text(45, "Dados do Ve\xEDculo");
+    \u0275\u0275elementStart(47, "div", 24)(48, "div", 25)(49, "div", 26)(50, "h5", 27);
+    \u0275\u0275text(51, "Dados do Ve\xEDculo");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(46, "p", 24)(47, "span", 25);
-    \u0275\u0275text(48, "Marca");
+    \u0275\u0275elementStart(52, "p", 28)(53, "span", 29);
+    \u0275\u0275text(54, "Placa");
     \u0275\u0275elementEnd();
-    \u0275\u0275text(49);
+    \u0275\u0275text(55);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(50, "p", 26)(51, "span", 25);
-    \u0275\u0275text(52, "Modelo");
+    \u0275\u0275elementStart(56, "p", 28)(57, "span", 29);
+    \u0275\u0275text(58, "Marca");
     \u0275\u0275elementEnd();
-    \u0275\u0275text(53);
+    \u0275\u0275text(59);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(54, "p", 26)(55, "span", 25);
-    \u0275\u0275text(56, "Portas");
+    \u0275\u0275elementStart(60, "p", 30)(61, "span", 29);
+    \u0275\u0275text(62, "Modelo");
     \u0275\u0275elementEnd();
-    \u0275\u0275text(57);
+    \u0275\u0275text(63);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(58, "p", 26)(59, "span", 25);
-    \u0275\u0275text(60, "Tipo selecionado");
+    \u0275\u0275elementStart(64, "p", 30)(65, "span", 29);
+    \u0275\u0275text(66, "Portas");
     \u0275\u0275elementEnd();
-    \u0275\u0275text(61);
+    \u0275\u0275text(67);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(68, "p", 30)(69, "span", 29);
+    \u0275\u0275text(70, "Tipo selecionado");
+    \u0275\u0275elementEnd();
+    \u0275\u0275text(71);
     \u0275\u0275elementEnd()()()()();
-    \u0275\u0275elementStart(62, "div", 27)(63, "cfa-btn-route", 28)(64, "div", 29)(65, "span", 30);
-    \u0275\u0275element(66, "img", 31);
+    \u0275\u0275elementStart(72, "div", 31)(73, "cfa-btn", 32);
+    \u0275\u0275listener("click", function HomeComponent_Template_cfa_btn_click_73_listener() {
+      return ctx.verificarCampos();
+    });
+    \u0275\u0275elementStart(74, "div", 33)(75, "span", 34);
+    \u0275\u0275element(76, "img", 35);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(67, "span");
-    \u0275\u0275text(68, "Criar Or\xE7amento");
+    \u0275\u0275elementStart(77, "span");
+    \u0275\u0275text(78, "Criar Or\xE7amento");
     \u0275\u0275elementEnd()()()();
   }
   if (rf & 2) {
+    \u0275\u0275advance();
+    \u0275\u0275property("ngIf", ctx.veiculoBackup.length >= 1);
     \u0275\u0275advance(6);
     \u0275\u0275property("ngModel", ctx.marcaSelecionada);
     \u0275\u0275advance(3);
@@ -64335,10 +64381,14 @@ _HomeComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _
     \u0275\u0275advance(5);
     \u0275\u0275property("ngModel", ctx.modeloVeiculo);
     \u0275\u0275advance(5);
+    \u0275\u0275property("ngModel", ctx.placaVeiculo);
+    \u0275\u0275advance(5);
     \u0275\u0275property("ngModel", ctx.portasSelecionadas);
     \u0275\u0275advance(11);
     \u0275\u0275property("ngModel", ctx.tipoSelecionado);
     \u0275\u0275advance(19);
+    \u0275\u0275textInterpolate1(": ", ctx.placaVeiculo, "");
+    \u0275\u0275advance(4);
     \u0275\u0275textInterpolate1(": ", ctx.marcaSelecionada, "");
     \u0275\u0275advance(4);
     \u0275\u0275textInterpolate1(": ", ctx.modeloVeiculo, "");
@@ -64347,12 +64397,13 @@ _HomeComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _
     \u0275\u0275advance(4);
     \u0275\u0275textInterpolate1(": ", ctx.tipoSelecionado, "");
     \u0275\u0275advance(2);
-    \u0275\u0275property("router", "/politica-de-privacidade")("classes", "btn-com-hover")("variant", "outline");
+    \u0275\u0275property("type", "button")("classes", "btn-com-hover")("variant", "outline");
   }
 }, dependencies: [
   AppModule,
   NgForOf,
-  BtnRouteComponent,
+  NgIf,
+  BtnComponent,
   FormsModule,
   NgSelectOption,
   \u0275NgSelectMultipleOption,
@@ -64360,10 +64411,10 @@ _HomeComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _
   SelectControlValueAccessor,
   NgControlStatus,
   NgModel
-], styles: ["\n\n/*# sourceMappingURL=home.component.css.map */"] });
+], styles: ["\n\n/*# sourceMappingURL=home.component-IUOVPH2N.css.map */"] });
 var HomeComponent = _HomeComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(HomeComponent, { className: "HomeComponent", filePath: "src\\app\\page\\home\\home.component.ts", lineNumber: 47 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(HomeComponent, { className: "HomeComponent", filePath: "src\\app\\page\\home\\home.component.ts", lineNumber: 48 });
 })();
 
 // src/app/shared/features/back/back.component.ts
@@ -64405,61 +64456,201 @@ _BackComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _
     \u0275\u0275advance(4);
     \u0275\u0275property("classes", "w")("variant", "flat");
   }
-}, dependencies: [BtnComponent], styles: ["\n\n/*# sourceMappingURL=back.component.css.map */"] });
+}, dependencies: [BtnComponent], styles: ["\n\n/*# sourceMappingURL=back.component-RVDQIELD.css.map */"] });
 var BackComponent = _BackComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(BackComponent, { className: "BackComponent", filePath: "src\\app\\shared\\features\\back\\back.component.ts", lineNumber: 16 });
 })();
 
-// src/app/page/privacy-policy/privacy-policy.component.ts
-var _PrivacyPolicyComponent = class _PrivacyPolicyComponent {
-  constructor() {
-  }
-  ngOnInit() {
-    window?.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "instant"
-    });
-  }
-};
-_PrivacyPolicyComponent.\u0275fac = function PrivacyPolicyComponent_Factory(t2) {
-  return new (t2 || _PrivacyPolicyComponent)();
-};
-_PrivacyPolicyComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PrivacyPolicyComponent, selectors: [["cfa-privacy-policy"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 17, vars: 2, consts: [[1, "container-background", "d-flex", "flex-column", "gap-2", "gap-md-0", "min-vh-100"], [1, "container", "pt-5"], [1, "d-flex", "justify-content-center", "justify-content-md-start"], [3, "routerLink"], ["src", "assets/images/logo.png", "alt", "Logo", 1, "w-200px"], [1, "container", "py-4"], [1, "row", "justify-content-between", "py-5"], [1, "col", "d-none", "d-lg-block"], [1, "col", "text-lg-center"], [1, "fa-solid", "fa-angles-left"], [1, "col-auto", "col-lg"]], template: function PrivacyPolicyComponent_Template(rf, ctx) {
+// src/app/page/menu-orcamento/menu-orcamento.component.ts
+function MenuOrcamentoComponent_ng_container_8_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "div")(4, "a", 3);
-    \u0275\u0275element(5, "img", 4);
-    \u0275\u0275elementEnd()()()();
-    \u0275\u0275elementStart(6, "div", 5)(7, "div", 6);
-    \u0275\u0275element(8, "div", 7);
-    \u0275\u0275elementStart(9, "div", 8)(10, "a", 3)(11, "cfa-btn");
-    \u0275\u0275element(12, "i", 9);
-    \u0275\u0275text(13, " Voltar ");
-    \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(14, "div", 10);
-    \u0275\u0275element(15, "feature-back");
-    \u0275\u0275elementEnd()()();
-    \u0275\u0275element(16, "footer");
+    \u0275\u0275elementContainerStart(0);
+    \u0275\u0275elementStart(1, "div", 11)(2, "div", 12)(3, "h5", 13);
+    \u0275\u0275text(4, "Dados do Ve\xEDculo");
+    \u0275\u0275elementEnd()();
+    \u0275\u0275elementStart(5, "p", 14)(6, "span", 15);
+    \u0275\u0275text(7, "Placa");
     \u0275\u0275elementEnd();
+    \u0275\u0275text(8);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(9, "p", 14)(10, "span", 15);
+    \u0275\u0275text(11, "Marca");
+    \u0275\u0275elementEnd();
+    \u0275\u0275text(12);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(13, "p", 16)(14, "span", 15);
+    \u0275\u0275text(15, "Modelo");
+    \u0275\u0275elementEnd();
+    \u0275\u0275text(16);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(17, "p", 16)(18, "span", 15);
+    \u0275\u0275text(19, "Portas");
+    \u0275\u0275elementEnd();
+    \u0275\u0275text(20);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(21, "p", 16)(22, "span", 15);
+    \u0275\u0275text(23, "Tipo selecionado");
+    \u0275\u0275elementEnd();
+    \u0275\u0275text(24);
+    \u0275\u0275elementEnd()();
+    \u0275\u0275elementContainerEnd();
   }
   if (rf & 2) {
+    const ctx_r0 = \u0275\u0275nextContext();
+    \u0275\u0275advance(8);
+    \u0275\u0275textInterpolate1(": ", ctx_r0.veiculo[0].placa, "");
     \u0275\u0275advance(4);
-    \u0275\u0275property("routerLink", "/");
+    \u0275\u0275textInterpolate1(": ", ctx_r0.veiculo[0].marca, "");
+    \u0275\u0275advance(4);
+    \u0275\u0275textInterpolate1(": ", ctx_r0.veiculo[0].modelo, "");
+    \u0275\u0275advance(4);
+    \u0275\u0275textInterpolate1(": ", ctx_r0.veiculo[0].portas, "");
+    \u0275\u0275advance(4);
+    \u0275\u0275textInterpolate1(": ", ctx_r0.veiculo[0].tipo, "");
+  }
+}
+var _MenuOrcamentoComponent = class _MenuOrcamentoComponent {
+  constructor(AppService2, VehicleService2, router, CommonService2) {
+    this.AppService = AppService2;
+    this.VehicleService = VehicleService2;
+    this.router = router;
+    this.CommonService = CommonService2;
+    this.veiculo = [];
+  }
+  voltarHome() {
+    this.VehicleService.veiculo = [];
+    this.CommonService.delLocalStorage("veiculo");
+    setTimeout(() => {
+      this.router.navigate(["/"]);
+    }, 500);
+  }
+  editarCroqui(n2) {
+    const lados = {
+      1: "lateral-direita",
+      2: "lateral-esquerda",
+      3: "frontal",
+      4: "traseira",
+      5: "teto"
+    };
+    const lado = lados[n2];
+    if (lado) {
+      console.log("Navegando para o croqui do lado:", lado);
+      this.router.navigate(["/croqui", lado]);
+    } else {
+      console.warn("N\xFAmero inv\xE1lido para o croqui:", n2);
+    }
+  }
+  ngOnInit() {
+    if (!this.VehicleService.veiculo || this.VehicleService.veiculo.length === 0) {
+    }
+    setTimeout(() => {
+      this.veiculo = this.VehicleService.veiculo;
+      console.log(this.veiculo);
+    }, 200);
+    console.log("Veiculo principal:");
+    console.log(this.VehicleService.veiculo);
+    console.log("Veiculo backup:");
+    console.log(this.VehicleService.backupVeiculo);
+  }
+};
+_MenuOrcamentoComponent.\u0275fac = function MenuOrcamentoComponent_Factory(t2) {
+  return new (t2 || _MenuOrcamentoComponent)(\u0275\u0275directiveInject(AppService), \u0275\u0275directiveInject(VehicleService), \u0275\u0275directiveInject(Router), \u0275\u0275directiveInject(CommonService));
+};
+_MenuOrcamentoComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _MenuOrcamentoComponent, selectors: [["app-menu-orcamento"]], standalone: true, features: [\u0275\u0275ProvidersFeature([
+  AppService,
+  BannerService
+]), \u0275\u0275StandaloneFeature], decls: 16, vars: 3, consts: [[1, "container"], [1, "d-flex", "justify-content-start"], [3, "classes", "variant", "click"], [1, "fa-solid", "fa-angles-left"], [1, "ps-2"], [1, "row"], [1, "col-12"], [4, "ngIf"], [1, "col-12", "mt-4"], [1, "bg-primary-bright", "p-3", "rounded", "d-flex", "justify-content-between", "align-items-center", 2, "cursor", "pointer", 3, "click"], [1, "fa-solid", "fa-chevron-right", "ms-2"], [1, "bg-primary-bright", "p-3", "rounded"], [1, "justify-content-center", "d-flex"], [1, "m-0", "fw-bold"], [1, "mt-3"], [1, "fw-bold"], [1, "mt-2"]], template: function MenuOrcamentoComponent_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div", 0)(1, "div", 1)(2, "cfa-btn", 2);
+    \u0275\u0275listener("click", function MenuOrcamentoComponent_Template_cfa_btn_click_2_listener() {
+      return ctx.voltarHome();
+    });
+    \u0275\u0275element(3, "i", 3);
+    \u0275\u0275elementStart(4, "span", 4);
+    \u0275\u0275text(5, "Voltar");
+    \u0275\u0275elementEnd()()();
+    \u0275\u0275elementStart(6, "div", 5)(7, "div", 6);
+    \u0275\u0275template(8, MenuOrcamentoComponent_ng_container_8_Template, 25, 5, "ng-container", 7);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(9, "div", 8)(10, "div", 9);
+    \u0275\u0275listener("click", function MenuOrcamentoComponent_Template_div_click_10_listener() {
+      return ctx.editarCroqui(1);
+    });
+    \u0275\u0275elementStart(11, "span");
+    \u0275\u0275text(12, " Lateral Direita ");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(13, "span");
+    \u0275\u0275text(14, "0");
+    \u0275\u0275element(15, "i", 10);
+    \u0275\u0275elementEnd()()()()();
+  }
+  if (rf & 2) {
+    \u0275\u0275advance(2);
+    \u0275\u0275property("classes", "w ps-1 pt-2 pe-1 pb-2")("variant", "flat");
     \u0275\u0275advance(6);
-    \u0275\u0275property("routerLink", "/");
+    \u0275\u0275property("ngIf", ctx.veiculo.length >= 1);
   }
 }, dependencies: [
   AppModule,
-  FooterComponent,
-  RouterModule,
-  RouterLink,
+  NgIf,
   BtnComponent,
-  BackComponent
-], styles: ["\n\n/*# sourceMappingURL=privacy-policy.component.css.map */"] });
-var PrivacyPolicyComponent = _PrivacyPolicyComponent;
+  FormsModule,
+  RouterModule
+], styles: ["\n\n/*# sourceMappingURL=menu-orcamento.component-GG3ZHULE.css.map */"] });
+var MenuOrcamentoComponent = _MenuOrcamentoComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PrivacyPolicyComponent, { className: "PrivacyPolicyComponent", filePath: "src\\app\\page\\privacy-policy\\privacy-policy.component.ts", lineNumber: 24 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(MenuOrcamentoComponent, { className: "MenuOrcamentoComponent", filePath: "src\\app\\page\\menu-orcamento\\menu-orcamento.component.ts", lineNumber: 54 });
+})();
+
+// src/app/page/croqui/croqui.component.ts
+var _CroquiComponent = class _CroquiComponent {
+  constructor(router, route) {
+    this.router = router;
+    this.route = route;
+  }
+  voltarMenu() {
+    setTimeout(() => {
+      this.router.navigate(["/menu-orcamento"]);
+    }, 200);
+  }
+  ngOnInit() {
+    this.alias = this.route.snapshot.paramMap.get("alias");
+    console.log("Alias selecionado:", this.alias);
+  }
+};
+_CroquiComponent.\u0275fac = function CroquiComponent_Factory(t2) {
+  return new (t2 || _CroquiComponent)(\u0275\u0275directiveInject(Router), \u0275\u0275directiveInject(ActivatedRoute));
+};
+_CroquiComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _CroquiComponent, selectors: [["app-croqui"]], standalone: true, features: [\u0275\u0275ProvidersFeature([
+  AppService,
+  BannerService
+]), \u0275\u0275StandaloneFeature], decls: 8, vars: 2, consts: [[1, "container"], [1, "d-flex", "justify-content-start"], [3, "classes", "variant", "click"], [1, "fa-solid", "fa-angles-left"], [1, "ps-2"]], template: function CroquiComponent_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div", 0)(1, "div", 1)(2, "cfa-btn", 2);
+    \u0275\u0275listener("click", function CroquiComponent_Template_cfa_btn_click_2_listener() {
+      return ctx.voltarMenu();
+    });
+    \u0275\u0275element(3, "i", 3);
+    \u0275\u0275elementStart(4, "span", 4);
+    \u0275\u0275text(5, "Voltar");
+    \u0275\u0275elementEnd()()();
+    \u0275\u0275elementStart(6, "h1");
+    \u0275\u0275text(7, "Teste");
+    \u0275\u0275elementEnd()();
+  }
+  if (rf & 2) {
+    \u0275\u0275advance(2);
+    \u0275\u0275property("classes", "w ps-1 pt-2 pe-1 pb-2")("variant", "flat");
+  }
+}, dependencies: [
+  AppModule,
+  BtnComponent,
+  FormsModule
+], styles: ["\n\n/*# sourceMappingURL=croqui.component-KSRJMAO5.css.map */"] });
+var CroquiComponent = _CroquiComponent;
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(CroquiComponent, { className: "CroquiComponent", filePath: "src\\app\\page\\croqui\\croqui.component.ts", lineNumber: 48 });
 })();
 
 // src/app/app.routes.ts
@@ -64469,9 +64660,17 @@ var routes = [
     component: HomeComponent
   },
   {
-    path: "politica-de-privacidade",
-    component: PrivacyPolicyComponent
+    path: "menu-orcamento",
+    component: MenuOrcamentoComponent
   },
+  {
+    path: "croqui/:alias",
+    component: CroquiComponent
+  },
+  // {
+  //   path: 'politica-de-privacidade',
+  //   component: PrivacyPolicyComponent
+  // },
   {
     path: "**",
     redirectTo: "",
@@ -64539,7 +64738,7 @@ _AppComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _A
     \u0275\u0275advance(4);
     \u0275\u0275property("src", "assets/images/inspectcar-logo.png", \u0275\u0275sanitizeUrl);
   }
-}, dependencies: [CommonModule, RouterOutlet], styles: ["\n\n/*# sourceMappingURL=app.component.css.map */"] });
+}, dependencies: [CommonModule, RouterOutlet], styles: ["\n\n/*# sourceMappingURL=app.component-IQ7N4WBN.css.map */"] });
 var AppComponent = _AppComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AppComponent, { className: "AppComponent", filePath: "src\\app\\app.component.ts", lineNumber: 14 });
@@ -64639,4 +64838,4 @@ moment-timezone/moment-timezone.js:
    * License: MIT
    *)
 */
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=main-BDHT72MU.js.map

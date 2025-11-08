@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { AppService, BannerService } from '@services';
+import { AppService, BannerService, VehicleService, CommonService } from '@services';
 import { AppModule } from '@core';
 import { ProductCardComponent } from "@components";
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 import {
@@ -48,6 +49,9 @@ export class HomeComponent {
 
   constructor(
     private AppService: AppService,
+    private VehicleService: VehicleService,
+    private router: Router,
+    private CommonService: CommonService,
     // private BannerService: BannerService,
     // config: NgbCarouselConfig
   ) {
@@ -60,94 +64,66 @@ export class HomeComponent {
   marcas: any[] = [];
   marcaSelecionada: string = '';
   modeloVeiculo: string = '';
+  placaVeiculo: string = '';
   portasSelecionadas: string = '';
   tipoSelecionado: string = '';
+  veiculoBackup: any[] = [];
 
-  // public banners: Banner[] = this.BannerService.banners
+  public verificarCampos() {
+    if (
+      !this.marcaSelecionada ||
+      !this.modeloVeiculo ||
+      !this.placaVeiculo ||
+      !this.portasSelecionadas ||
+      !this.tipoSelecionado
+    ) {
+      alert('Por favor, preencha todos os dados do veículo antes de continuar!');
+    } else {
+      this.VehicleService.veiculo.push({
+        marca: this.marcaSelecionada,
+        placa: this.placaVeiculo,
+        modelo: this.modeloVeiculo,
+        portas: this.portasSelecionadas,
+        tipo: this.tipoSelecionado
+      });
+      this.VehicleService.backupVeiculo = [];
+      this.VehicleService.backupVeiculo.push({
+        marca: this.marcaSelecionada,
+        placa: this.placaVeiculo,
+        modelo: this.modeloVeiculo,
+        portas: this.portasSelecionadas,
+        tipo: this.tipoSelecionado
+      });
+      this.CommonService.delLocalStorage('veiculo');
+      this.CommonService.delLocalStorage('backupVeiculo');
+      this.CommonService.setLocalStorage('veiculo', this.VehicleService.veiculo, 1000000);
+      this.CommonService.setLocalStorage('backupVeiculo', this.VehicleService.backupVeiculo, 1000000);
+      this.router.navigate(['/menu-orcamento']);
+    }
+  }
 
-  // Banner
-
-  // private parseBrDate(dateStr: string): Date {
-  //   if (!dateStr || !dateStr.includes('/')) {
-  //     return new Date('Invalid'); // garante que vai cair no filtro depois
-  //   }
-
-  //   const [day, month, year] = dateStr.split('/').map(Number);
-  //   return new Date(year, month - 1, day);
-  // }
-
-//   getActiveBanners(): Banner[] {
-//   const today = new Date();
-//   const weekday = today.getDay() === 0 ? 1 : today.getDay() + 1;
-
-//   return this.banners.filter(b => {
-//     let validWeekday = true;
-//     let validDate = true;
-
-//     // Validar weekday (se tiver)
-//     if (b.weekdays && b.weekdays.length > 0) {
-//       validWeekday = b.weekdays.includes(weekday);
-//     }
-
-//     // Validar dateRange (se tiver)
-//     if (b.startDate && b.endDate) {
-//       const start = this.parseBrDate(b.startDate);
-//       const end = this.parseBrDate(b.endDate);
-
-//       if (isNaN(start.getTime()) || isNaN(end.getTime())) {
-//         console.warn('Data inválida em banner:', b);
-//         validDate = false;
-//       } else {
-//         end.setHours(23, 59, 59, 999);
-//         validDate = today >= start && today <= end;
-//       }
-//     }
-
-//     // Só entra se passar em todos os filtros que existem
-//     return validWeekday && validDate;
-//   });
-// }
-
-
-
-  // public categories = this.AppService.categorias;
-
-  // Categoria Inicial Ativa
-  // activeSection = this.categories[0].id;
-
-  // @ViewChild('sticky') stickyElement!: ElementRef;
-
-  // scrollToSection(id: string) {
-  //   const el = document.getElementById(id);
-  //   if (el) {
-  //     const stickyHeight = this.stickyElement.nativeElement.offsetHeight;
-  //     const top = el.getBoundingClientRect().top + window.scrollY - stickyHeight;
-  //     window.scrollTo({ top, behavior: 'smooth' });
-  //   }
-  // }
-
-  // @HostListener('window:scroll', [])
-  // onWindowScroll() {
-  //   for (const section of this.categories) {
-  //     const el = document.getElementById(section.alias);
-  //     if (el) {
-  //       const rect = el.getBoundingClientRect();
-  //       if (rect.top <= 150 && rect.bottom >= 100) {
-  //         this.activeSection = section.id;
-  //         this.scrollActiveItemIntoView();
-  //         break;
-  //       }
-  //     }
-  //   }
-  // }
-
-  // scrollActiveItemIntoView() {
-  //   const activeBtn = document.querySelector('.btn.fw-bold');
-  //   activeBtn?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-  // }
+  public carregaVeiculoBack() {
+    this.marcaSelecionada = this.veiculoBackup[0].marca;
+    this.modeloVeiculo = this.veiculoBackup[0].modelo;
+    this.placaVeiculo = this.veiculoBackup[0].placa;
+    this.portasSelecionadas = this.veiculoBackup[0].portas;
+    this.tipoSelecionado = this.veiculoBackup[0].tipo;
+  }
 
   ngOnInit(): void {
+    if (this.CommonService.getLocalStorage('backupVeiculo')) {
+      this.VehicleService.backupVeiculo = this.CommonService.getLocalStorage('backupVeiculo');
+      this.veiculoBackup = this.CommonService.getLocalStorage('backupVeiculo');
+      console.log(this.veiculoBackup);
+    } else {
+      console.log('Nenhum veículo de backup encontrado no localStorage.');
+    }
     this.marcas = this.AppService.getMarcas();
+    console.log('Veiculo principal:');
+    console.log(this.VehicleService.veiculo);
+    console.log('Veiculo backup:');
+    console.log(this.VehicleService.backupVeiculo);
+
   }
 
 }

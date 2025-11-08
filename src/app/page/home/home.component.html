@@ -1,5 +1,17 @@
 <div class="container">
-    <div class="row mt-5">
+    <ng-container *ngIf="veiculoBackup.length >= 1">
+        <div class="d-flex justify-content-center pt-3">
+            <cfa-btn [type]="'button'" [classes]="'btn-com-hover ps-1 pe-1 pt-1 pb-1'" (click)="carregaVeiculoBack()"
+                [variant]="'outline'">
+                <div class="d-flex align-items-center gap-2 px-2">
+                    <span class=""><img class="img-fluid" src="assets/images/svg/reload.svg" width="30" height="30"
+                            alt="Reload"></span>
+                    <span>Carregar Veículo Anterior<div class="fs-12px">{{ veiculoBackup[0].placa }}</div></span>
+                </div>
+            </cfa-btn>
+        </div>
+    </ng-container>
+    <div class="row mt-3">
         <div class="col-12 col-md-6">
             <div class="mb-3">
                 <label for="marcaVeiculo" class="form-label">Selecione a Marca do Veículo</label>
@@ -18,7 +30,14 @@
                     placeholder="Digite o modelo">
             </div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-4">
+            <div class="mb-3">
+                <label for="placaVeiculo" class="form-label">Placa do Veículo</label>
+                <input type="text" class="form-control" id="placaVeiculo" [(ngModel)]="placaVeiculo"
+                    placeholder="Digite a placa">
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
             <div class="mb-3">
                 <label for="portas" class="form-label">Quantidade de Portas</label>
                 <select class="form-select" id="portas" [(ngModel)]="portasSelecionadas" aria-label="portas">
@@ -28,7 +47,7 @@
                 </select>
             </div>
         </div>
-        <div class="col-12  col-md-6">
+        <div class="col-12  col-md-4">
             <div class="mb-3">
                 <label for="tipoVeiculo" class="form-label">Tipo do Veículo</label>
                 <select class="form-select" id="tipoVeiculo" [(ngModel)]="tipoSelecionado" aria-label="tipoVeiculo">
@@ -40,11 +59,14 @@
                 </select>
             </div>
         </div>
+
+
         <div class="col-12">
-            <div class="bg-primary-bright p-3 mt-4 rounded">
+            <div class="bg-primary-bright p-3 mt-3 rounded">
                 <div class="justify-content-center d-flex">
                     <h5 class="m-0 fw-bold">Dados do Veículo</h5>
                 </div>
+                <p class="mt-3"><span class="fw-bold">Placa</span>: {{ placaVeiculo }}</p>
                 <p class="mt-3"><span class="fw-bold">Marca</span>: {{ marcaSelecionada }}</p>
                 <p class="mt-2"><span class="fw-bold">Modelo</span>: {{ modeloVeiculo }}</p>
                 <p class="mt-2"><span class="fw-bold">Portas</span>: {{ portasSelecionadas }}</p>
@@ -56,13 +78,13 @@
 
 </div>
 
-<div class="d-flex justify-content-center pt-5">
-    <cfa-btn-route [router]="'/politica-de-privacidade'" [classes]="'btn-com-hover'" [variant]="'outline'">
+<div class="d-flex justify-content-center py-3">
+    <cfa-btn [type]="'button'" [classes]="'btn-com-hover'" (click)="verificarCampos()" [variant]="'outline'">
         <div class="d-flex align-items-center gap-2">
             <span class="pb-1"><img class="img-fluid" src="assets/images/svg/car-side.svg" width="30" height="30"
                     alt="Carro"></span>
             <span>Criar Orçamento</span>
         </div>
-    </cfa-btn-route>
+    </cfa-btn>
 
 </div>
