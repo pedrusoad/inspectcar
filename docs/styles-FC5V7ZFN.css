@@ -21513,6 +21513,26 @@ nav.scrolled-lg {
 .menu-item:hover {
   color: #000;
 }
+.image-container-croqui {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 600px;
+  cursor: crosshair;
+}
+.image-container-croqui img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.mark {
+  position: absolute;
+  color: red;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  font-size: 24px;
+}
 
 /* angular:styles/global:styles */
-/*# sourceMappingURL=styles-TW4PRDGY.css.map */
+/*# sourceMappingURL=styles-FC5V7ZFN.css.map */

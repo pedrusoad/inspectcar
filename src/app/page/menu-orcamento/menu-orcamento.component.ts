@@ -94,7 +94,7 @@ export class MenuOrcamentoComponent {
 
   ngOnInit(): void {
     if (!this.VehicleService.veiculo || this.VehicleService.veiculo.length === 0) {
-      // this.router.navigate(['/']);
+      this.router.navigate(['/']);
     }
     setTimeout(() => {
       this.veiculo = this.VehicleService.veiculo

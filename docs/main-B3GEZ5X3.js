@@ -64543,6 +64543,7 @@ var _MenuOrcamentoComponent = class _MenuOrcamentoComponent {
   }
   ngOnInit() {
     if (!this.VehicleService.veiculo || this.VehicleService.veiculo.length === 0) {
+      this.router.navigate(["/"]);
     }
     setTimeout(() => {
       this.veiculo = this.VehicleService.veiculo;
@@ -64604,28 +64605,102 @@ var MenuOrcamentoComponent = _MenuOrcamentoComponent;
 })();
 
 // src/app/page/croqui/croqui.component.ts
+function CroquiComponent_ng_container_8_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementContainerStart(0);
+    \u0275\u0275elementStart(1, "div", 13)(2, "div", 14)(3, "h5", 15);
+    \u0275\u0275text(4, "Dados do Ve\xEDculo");
+    \u0275\u0275elementEnd()();
+    \u0275\u0275elementStart(5, "p", 16)(6, "span", 17);
+    \u0275\u0275text(7, "Placa");
+    \u0275\u0275elementEnd();
+    \u0275\u0275text(8);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(9, "p", 16)(10, "span", 17);
+    \u0275\u0275text(11, "Marca");
+    \u0275\u0275elementEnd();
+    \u0275\u0275text(12);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(13, "p", 18)(14, "span", 17);
+    \u0275\u0275text(15, "Modelo");
+    \u0275\u0275elementEnd();
+    \u0275\u0275text(16);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(17, "p", 18)(18, "span", 17);
+    \u0275\u0275text(19, "Portas");
+    \u0275\u0275elementEnd();
+    \u0275\u0275text(20);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(21, "p", 18)(22, "span", 17);
+    \u0275\u0275text(23, "Tipo selecionado");
+    \u0275\u0275elementEnd();
+    \u0275\u0275text(24);
+    \u0275\u0275elementEnd()();
+    \u0275\u0275elementContainerEnd();
+  }
+  if (rf & 2) {
+    const ctx_r0 = \u0275\u0275nextContext();
+    \u0275\u0275advance(8);
+    \u0275\u0275textInterpolate1(": ", ctx_r0.veiculo[0].placa, "");
+    \u0275\u0275advance(4);
+    \u0275\u0275textInterpolate1(": ", ctx_r0.veiculo[0].marca, "");
+    \u0275\u0275advance(4);
+    \u0275\u0275textInterpolate1(": ", ctx_r0.veiculo[0].modelo, "");
+    \u0275\u0275advance(4);
+    \u0275\u0275textInterpolate1(": ", ctx_r0.veiculo[0].portas, "");
+    \u0275\u0275advance(4);
+    \u0275\u0275textInterpolate1(": ", ctx_r0.veiculo[0].tipo, "");
+  }
+}
+var _c06 = (a0, a1) => ({ top: a0, left: a1 });
+function CroquiComponent_div_13_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div", 19);
+    \u0275\u0275text(1, " X ");
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const mark_r3 = ctx.$implicit;
+    \u0275\u0275property("ngStyle", \u0275\u0275pureFunction2(1, _c06, mark_r3.yPercent + "%", mark_r3.xPercent + "%"));
+  }
+}
 var _CroquiComponent = class _CroquiComponent {
-  constructor(router, route) {
+  constructor(VehicleService2, router, route) {
+    this.VehicleService = VehicleService2;
     this.router = router;
     this.route = route;
+    this.marks = [];
+    this.veiculo = [];
   }
   voltarMenu() {
     setTimeout(() => {
       this.router.navigate(["/menu-orcamento"]);
     }, 200);
   }
+  onImageClick(event) {
+    const container = event.currentTarget.getBoundingClientRect();
+    const x2 = event.clientX - container.left;
+    const y2 = event.clientY - container.top;
+    const xPercent = x2 / container.width * 100;
+    const yPercent = y2 / container.height * 100;
+    this.marks.push({ xPercent, yPercent });
+  }
   ngOnInit() {
+    if (!this.VehicleService.veiculo || this.VehicleService.veiculo.length === 0) {
+      this.router.navigate(["/"]);
+    }
+    this.veiculo = this.VehicleService.veiculo;
     this.alias = this.route.snapshot.paramMap.get("alias");
     console.log("Alias selecionado:", this.alias);
   }
 };
 _CroquiComponent.\u0275fac = function CroquiComponent_Factory(t2) {
-  return new (t2 || _CroquiComponent)(\u0275\u0275directiveInject(Router), \u0275\u0275directiveInject(ActivatedRoute));
+  return new (t2 || _CroquiComponent)(\u0275\u0275directiveInject(VehicleService), \u0275\u0275directiveInject(Router), \u0275\u0275directiveInject(ActivatedRoute));
 };
 _CroquiComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _CroquiComponent, selectors: [["app-croqui"]], standalone: true, features: [\u0275\u0275ProvidersFeature([
   AppService,
   BannerService
-]), \u0275\u0275StandaloneFeature], decls: 8, vars: 2, consts: [[1, "container"], [1, "d-flex", "justify-content-start"], [3, "classes", "variant", "click"], [1, "fa-solid", "fa-angles-left"], [1, "ps-2"]], template: function CroquiComponent_Template(rf, ctx) {
+]), \u0275\u0275StandaloneFeature], decls: 14, vars: 4, consts: [[1, "container"], [1, "d-flex", "justify-content-start"], [3, "classes", "variant", "click"], [1, "fa-solid", "fa-angles-left"], [1, "ps-2"], [1, "row"], [1, "col-12"], [4, "ngIf"], [1, "justify-content-center"], [1, "image-container-croqui", "w-100", 3, "click"], ["src", "assets/images/croqui/sedan/1.jpg", "alt", "Imagem interativa", 1, "align-self-center"], ["imgRef", ""], ["class", "mark", 3, "ngStyle", 4, "ngFor", "ngForOf"], [1, "bg-primary-bright", "p-3", "rounded"], [1, "justify-content-center", "d-flex"], [1, "m-0", "fw-bold"], [1, "mt-3"], [1, "fw-bold"], [1, "mt-2"], [1, "mark", 3, "ngStyle"]], template: function CroquiComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 0)(1, "div", 1)(2, "cfa-btn", 2);
     \u0275\u0275listener("click", function CroquiComponent_Template_cfa_btn_click_2_listener() {
@@ -64635,16 +64710,30 @@ _CroquiComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type:
     \u0275\u0275elementStart(4, "span", 4);
     \u0275\u0275text(5, "Voltar");
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(6, "h1");
-    \u0275\u0275text(7, "Teste");
-    \u0275\u0275elementEnd()();
+    \u0275\u0275elementStart(6, "div", 5)(7, "div", 6);
+    \u0275\u0275template(8, CroquiComponent_ng_container_8_Template, 25, 5, "ng-container", 7);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(9, "div", 8)(10, "div", 9);
+    \u0275\u0275listener("click", function CroquiComponent_Template_div_click_10_listener($event) {
+      return ctx.onImageClick($event);
+    });
+    \u0275\u0275element(11, "img", 10, 11);
+    \u0275\u0275template(13, CroquiComponent_div_13_Template, 2, 4, "div", 12);
+    \u0275\u0275elementEnd()()()();
   }
   if (rf & 2) {
     \u0275\u0275advance(2);
     \u0275\u0275property("classes", "w ps-1 pt-2 pe-1 pb-2")("variant", "flat");
+    \u0275\u0275advance(6);
+    \u0275\u0275property("ngIf", ctx.veiculo.length >= 1);
+    \u0275\u0275advance(5);
+    \u0275\u0275property("ngForOf", ctx.marks);
   }
 }, dependencies: [
   AppModule,
+  NgForOf,
+  NgIf,
+  NgStyle,
   BtnComponent,
   FormsModule
 ], styles: ["\n\n/*# sourceMappingURL=croqui.component-KSRJMAO5.css.map */"] });
@@ -64838,4 +64927,4 @@ moment-timezone/moment-timezone.js:
    * License: MIT
    *)
 */
-//# sourceMappingURL=main-BDHT72MU.js.map
+//# sourceMappingURL=main-B3GEZ5X3.js.map

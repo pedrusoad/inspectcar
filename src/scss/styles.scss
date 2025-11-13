@@ -28,11 +28,13 @@ body {
 
 .multi-line-truncate {
   display: -webkit-box;
-  -webkit-line-clamp: 2;   /* número de linhas antes de cortar */
+  -webkit-line-clamp: 2;
+  /* número de linhas antes de cortar */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: normal;     /* permite quebrar linhas */
+  white-space: normal;
+  /* permite quebrar linhas */
 }
 
 h1 {
@@ -145,10 +147,11 @@ nav.scrolled-lg {
 }
 
 .carousel-control-next-icon {
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2337113c'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>")!important;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2337113c'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }
+
 .carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2337113c'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>")!important;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2337113c'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>") !important;
 }
 
 // html, body {
@@ -165,7 +168,8 @@ nav.scrolled-lg {
 }
 
 .d-flex.overflow-auto::-webkit-scrollbar {
-  height: 6px; /* altura da barra horizontal */
+  height: 6px;
+  /* altura da barra horizontal */
 }
 
 /* Garante preenchimento da área segura no iPhone */
@@ -200,9 +204,35 @@ nav.scrolled-lg {
 .menu-item.active {
   font-weight: 700;
   color: #000;
-  border-bottom-color: #8B4513; /* cor marrom como na imagem */
+  border-bottom-color: #8B4513;
+  /* cor marrom como na imagem */
 }
 
 .menu-item:hover {
   color: #000;
+}
+
+
+
+.image-container-croqui {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 600px;
+  cursor: crosshair;
+  }
+
+.image-container-croqui img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mark {
+  position: absolute;
+  color: red;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  font-size: 24px;
 }

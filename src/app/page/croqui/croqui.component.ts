@@ -3,7 +3,7 @@ import { AppService, BannerService, VehicleService, CommonService } from '@servi
 import { AppModule } from '@core';
 import { ProductCardComponent } from "@components";
 import { FormsModule } from '@angular/forms';
-import { Router, ActivatedRoute  } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 import {
@@ -49,13 +49,15 @@ export class CroquiComponent {
 
   constructor(
     // private AppService: AppService,
-    // private VehicleService: VehicleService,
+    private VehicleService: VehicleService,
     private router: Router,
     private route: ActivatedRoute,
     // private CommonService: CommonService,
   ) { }
 
   alias!: string;
+  marks: { xPercent: number; yPercent: number }[] = [];
+  public veiculo: any[] = [];
 
   public voltarMenu() {
     setTimeout(() => {
@@ -63,7 +65,24 @@ export class CroquiComponent {
     }, 200);
   }
 
+
+  onImageClick(event: MouseEvent) {
+    const container = (event.currentTarget as HTMLElement).getBoundingClientRect();
+
+    const x = event.clientX - container.left;
+    const y = event.clientY - container.top;
+
+    const xPercent = (x / container.width) * 100;
+    const yPercent = (y / container.height) * 100;
+
+    this.marks.push({ xPercent, yPercent });
+  }
+
   ngOnInit(): void {
+    if (!this.VehicleService.veiculo || this.VehicleService.veiculo.length === 0) {
+      this.router.navigate(['/']);
+    }
+    this.veiculo = this.VehicleService.veiculo
     this.alias = this.route.snapshot.paramMap.get('alias')!;
     console.log('Alias selecionado:', this.alias);
   }

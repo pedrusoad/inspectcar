@@ -4,5 +4,38 @@
             <i class="fa-solid fa-angles-left"></i> <span class="ps-2">Voltar</span>
         </cfa-btn>
     </div>
-    <h1>Teste</h1>
+
+    <div class="row">
+        <div class="col-12">
+            <ng-container *ngIf="veiculo.length >= 1">
+                <div class="bg-primary-bright p-3 rounded">
+                    <div class="justify-content-center d-flex">
+                        <h5 class="m-0 fw-bold">Dados do Veículo</h5>
+                    </div>
+                    <p class="mt-3"><span class="fw-bold">Placa</span>: {{ veiculo[0].placa }}</p>
+                    <p class="mt-3"><span class="fw-bold">Marca</span>: {{ veiculo[0].marca }}</p>
+                    <p class="mt-2"><span class="fw-bold">Modelo</span>: {{ veiculo[0].modelo }}</p>
+                    <p class="mt-2"><span class="fw-bold">Portas</span>: {{ veiculo[0].portas }}</p>
+                    <p class="mt-2"><span class="fw-bold">Tipo selecionado</span>: {{ veiculo[0].tipo }}</p>
+                </div>
+            </ng-container>
+        </div>
+        <div class="justify-content-center">
+
+            
+            <div class="image-container-croqui w-100" (click)="onImageClick($event)">
+                <img class="align-self-center" src="assets/images/croqui/sedan/1.jpg" alt="Imagem interativa" #imgRef />
+                <div *ngFor="let mark of marks" class="mark" [ngStyle]="{
+                    top: mark.yPercent + '%',
+                    left: mark.xPercent + '%'
+                }">
+                X
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+
 </div>
