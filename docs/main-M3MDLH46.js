@@ -64700,7 +64700,7 @@ _CroquiComponent.\u0275fac = function CroquiComponent_Factory(t2) {
 _CroquiComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _CroquiComponent, selectors: [["app-croqui"]], standalone: true, features: [\u0275\u0275ProvidersFeature([
   AppService,
   BannerService
-]), \u0275\u0275StandaloneFeature], decls: 14, vars: 4, consts: [[1, "container"], [1, "d-flex", "justify-content-start"], [3, "classes", "variant", "click"], [1, "fa-solid", "fa-angles-left"], [1, "ps-2"], [1, "row"], [1, "col-12"], [4, "ngIf"], [1, "justify-content-center"], [1, "image-container-croqui", "w-100", 3, "click"], ["src", "assets/images/croqui/sedan/1.jpg", "alt", "Imagem interativa", 1, "align-self-center"], ["imgRef", ""], ["class", "mark", 3, "ngStyle", 4, "ngFor", "ngForOf"], [1, "bg-primary-bright", "p-3", "rounded"], [1, "justify-content-center", "d-flex"], [1, "m-0", "fw-bold"], [1, "mt-3"], [1, "fw-bold"], [1, "mt-2"], [1, "mark", 3, "ngStyle"]], template: function CroquiComponent_Template(rf, ctx) {
+]), \u0275\u0275StandaloneFeature], decls: 14, vars: 4, consts: [[1, "container"], [1, "d-flex", "justify-content-start"], [3, "classes", "variant", "click"], [1, "fa-solid", "fa-angles-left"], [1, "ps-2"], [1, "row"], [1, "col-12"], [4, "ngIf"], [1, "d-flex", "justify-content-center"], [1, "image-container-croqui", "w-100", 3, "click"], ["src", "assets/images/croqui/sedan/1.jpg", "alt", "Imagem interativa", 1, "align-self-center"], ["imgRef", ""], ["class", "mark", 3, "ngStyle", 4, "ngFor", "ngForOf"], [1, "bg-primary-bright", "p-3", "rounded"], [1, "justify-content-center", "d-flex"], [1, "m-0", "fw-bold"], [1, "mt-3"], [1, "fw-bold"], [1, "mt-2"], [1, "mark", 3, "ngStyle"]], template: function CroquiComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 0)(1, "div", 1)(2, "cfa-btn", 2);
     \u0275\u0275listener("click", function CroquiComponent_Template_cfa_btn_click_2_listener() {
@@ -64927,4 +64927,4 @@ moment-timezone/moment-timezone.js:
    * License: MIT
    *)
 */
-//# sourceMappingURL=main-B3GEZ5X3.js.map
+//# sourceMappingURL=main-M3MDLH46.js.map
